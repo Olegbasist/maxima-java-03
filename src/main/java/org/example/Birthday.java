@@ -19,7 +19,7 @@ public class Birthday
 
     public static LocalDate nextBirthday (int year, int month, int date)
     {
-        return (LocalDate.now()).plusDays(getAge(year, month, date) % 1000);
+        return (LocalDate.now()).plusDays(1000 - (getAge(year, month, date) % 1000));
 
     }
 
