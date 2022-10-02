@@ -8,20 +8,16 @@ package org.example;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
-public class App
+public class Birthday
 {
-    public static void main( String[] args )
+
+    public static int getAge (int year, int month, int date)
     {
-
-        /*LocalDate birthDate = LocalDate.of(2021,10,2);
-        LocalDate nowadays = LocalDate.now();
-
-        System.out.println(birthDate);
-        System.out.println(birthDate.until(nowadays, ChronoUnit.DAYS));*/
-
-        Birthday ageInDays = new Birthday();
-        System.out.print("Мой возраст в днях: ");
-        System.out.println(ageInDays.getAge(1980,7,1));
+        LocalDate birthDate = LocalDate.of(year, month, date);
+        return (int) ChronoUnit.DAYS.between(birthDate, LocalDate.now());
 
     }
+
+
+
 }
