@@ -34,3 +34,4 @@ buildNumber.properties
 .idea
 .idea/*
 .idea/workspace.xml
+*.xml
