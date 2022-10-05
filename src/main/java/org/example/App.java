@@ -5,6 +5,8 @@ package org.example;
 // LocalDate nextBirthday(int year, int month, int date) — вернет дату следующего дня рождения в 1000 дней.
 
 
+import java.util.Collection;
+
 public class App
 {
     public static void main( String[] args )
@@ -18,6 +20,8 @@ public class App
         System.out.println(" дней");
         System.out.print("Дата следующего тысячеденного дня рождения: ");
         System.out.println(Birthday.nextBirthday(1980,7,1));
+
+
 
     }
 }
