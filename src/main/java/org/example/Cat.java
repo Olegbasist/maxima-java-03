@@ -7,7 +7,7 @@ package org.example;
 //  Описать геттеры и сеттеры всех свойств.
 
 public class Cat {
-    
+
     private String name;
     private int weight;
     private boolean isAngry;
@@ -34,5 +34,11 @@ public class Cat {
 
     public void setAngry(boolean angry) {
         isAngry = angry;
+    }
+
+    public Cat(String name, int weight, boolean isAngry) {
+        this.name = name;
+        this.weight = weight;
+        this.isAngry = isAngry;
     }
 }

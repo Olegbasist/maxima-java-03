@@ -15,6 +15,7 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        Cat cat = new Cat("Пушистик", 3, false);
+        System.out.println( cat.getName()+ " " +cat.getWeight()+ " кило" );
     }
 }
