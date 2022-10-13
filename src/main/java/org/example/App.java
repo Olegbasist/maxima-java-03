@@ -15,7 +15,10 @@ public class App
 {
     public static void main( String[] args )
     {
-        Cat cat = new Cat("Пушистик", 3, false);
+        Cat cat = new Cat();
+        cat.setName("Рыжик");
+        cat.setWeight(50);
+        cat.setAngry(true);
         System.out.println( cat.getName()+ " " +cat.getWeight()+ " кило" );
     }
 }
