@@ -27,7 +27,7 @@ public class Cat {
     public void setWeight(int weight) {
 
         if (weight>30){
-            setWeight(weight=0);
+            weight=0;
         }
 
         this.weight = weight;
@@ -41,12 +41,4 @@ public class Cat {
         isAngry = angry;
     }
 
-
-    /*public Cat(String name, int weight, boolean isAngry) {
-
-            this.name = name;
-            this.weight = weight;
-            this.isAngry = isAngry;
-
-    }*/
 }

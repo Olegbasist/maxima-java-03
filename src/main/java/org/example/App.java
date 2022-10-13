@@ -17,7 +17,7 @@ public class App
     {
         Cat cat = new Cat();
         cat.setName("Рыжик");
-        cat.setWeight(50);
+        cat.setWeight(5);
         cat.setAngry(true);
         System.out.println( cat.getName()+ " " +cat.getWeight()+ " кило" );
     }
