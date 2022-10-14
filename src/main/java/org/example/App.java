@@ -6,7 +6,8 @@ package org.example;
 //  isAngry — сердитость, boolean
 //  Описать геттеры и сеттеры всех свойств.
 //
-//  29.09.2022 Описать свой класс исключений — IncorrectCatWeightException и выбрасывать его при присваивании коту отрицательного веса.
+//  29.09.2022 Описать свой класс исключений — IncorrectCatWeightException
+//  и выбрасывать его при присваивании коту отрицательного веса.
 //  todo: 29.09.2022 Описать фабрику котов CatFactory
 //   со статическим методом Cat createCat(String name, int weight).
 //   Этот метод будет пытаться создать кота, если вес указан корректный, то будет создан дружелюбный кот с указанным именем и весом.
@@ -24,7 +25,7 @@ public class App
         }*/
 
 
-        Cat cat = CatFactory.createCat("Шерхан", 8);
+        Cat cat = CatFactory.createCat("Рыжик", -1);
         System.out.print(!cat.isAngry() ? "Добрый " : "Злой ");
         System.out.println(cat.getName() + " весом " + cat.getWeight() + " кило");
 

@@ -11,13 +11,14 @@ public class CatFactory {
 
     public static Cat createCat(String name, int weight) throws Exception {
 
-        //Cat cat = new Cat(name,weight,false);
-        if (0 < weight && weight < 100) return new Cat(name,weight,false);
+        if (weight<0){
+            throw new IncorrectCatWeightException("Покорми котика! Путь он весит хоть сколько-нибудь.");
+        }
 
-        /*cat.setName(name);
-        cat.setWeight(5);
-        cat.setAngry(true);*/
-        return new Cat(name,5,true);
+        return weight < 30
+                ? new Cat(name,weight,false)
+                : new Cat(name,5,true);
+
     }
 
 }
