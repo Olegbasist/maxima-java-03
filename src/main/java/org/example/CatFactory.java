@@ -9,11 +9,15 @@ public class CatFactory {
 
 
 
-    public static Cat createCat(String name, int weight){
-        
+    public static Cat createCat(String name, int weight) throws Exception {
+
         Cat cat = new Cat();
-        if (0 < weight && weight < 30) return new Cat();
-        return new Cat();
+        if (0 < weight && weight < 100) return cat;
+
+        cat.setName(name);
+        cat.setWeight(5);
+        cat.setAngry(true);
+        return cat;
     }
 
 }
