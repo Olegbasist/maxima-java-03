@@ -41,4 +41,10 @@ public class Cat {
         isAngry = angry;
     }
 
+    public Cat(String name, int weight, boolean isAngry) {
+        this.name = name;
+        this.weight = weight;
+        this.isAngry = isAngry;
+    }
+
 }

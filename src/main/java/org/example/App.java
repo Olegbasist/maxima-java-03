@@ -16,14 +16,17 @@ public class App
 {
     public static void main( String[] args ) throws Exception {
 
-        try {
-            Cat cat = new Cat();
-            cat.setName("Рыжик");
-            cat.setWeight(55);
-            cat.setAngry(true);
+        /*try {
+            Cat cat = new Cat("Пушок", 4,false);
             System.out.println(cat.getName() + " " + cat.getWeight() + " кило");
         } catch (IncorrectCatWeightException exception){
             System.out.println("Пожалей котика! Посади его на диету");
-        }
+        }*/
+
+
+        Cat cat = CatFactory.createCat("Шерхан", 8);
+        System.out.print(!cat.isAngry() ? "Добрый " : "Злой ");
+        System.out.println(cat.getName() + " весом " + cat.getWeight() + " кило");
+
     }
 }
