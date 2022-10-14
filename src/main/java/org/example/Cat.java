@@ -24,10 +24,10 @@ public class Cat {
         return weight;
     }
 
-    public void setWeight(int weight) {
+    public void setWeight(int weight) throws Exception {
 
         if (weight>30){
-            weight=0;
+            throw new IncorrectCatWeightException("Пожалей котика!");
         }
 
         this.weight = weight;
