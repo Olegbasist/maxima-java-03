@@ -14,10 +14,15 @@ package org.example;
 public class App 
 {
     public static void main( String[] args ) throws Exception {
-        Cat cat = new Cat();
-        cat.setName("Рыжик");
-        cat.setWeight(55);
-        cat.setAngry(true);
-        System.out.println( cat.getName()+ " " +cat.getWeight()+ " кило" );
+
+        try {
+            Cat cat = new Cat();
+            cat.setName("Рыжик");
+            cat.setWeight(55);
+            cat.setAngry(true);
+            System.out.println(cat.getName() + " " + cat.getWeight() + " кило");
+        } catch (IncorrectCatWeightException exception){
+            System.out.println("Пожалей котика! Посади его на диету");
+        }
     }
 }
