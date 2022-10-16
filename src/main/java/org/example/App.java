@@ -1,28 +1,38 @@
 package org.example;
 
-// 26.09.2022  Описать класс Birthday c двумя статическими методами:
-// int getAge(int year, int month, int date) — вернет возраст в днях
-// LocalDate nextBirthday(int year, int month, int date) — вернет дату следующего дня рождения в 1000 дней.
+//  29.09.2022 Описать класс Cat (кот) со свойствами:
+//  name — имя, строка.
+//  weight — вес, число int
+//  isAngry — сердитость, boolean
+//  Описать геттеры и сеттеры всех свойств.
+//
+//  29.09.2022 Описать свой класс исключений — IncorrectCatWeightException
+//  и выбрасывать его при присваивании коту отрицательного веса.
+//  29.09.2022 Описать фабрику котов CatFactory
+//   со статическим методом Cat createCat(String name, int weight).
+//   Этот метод будет пытаться создать кота, если вес указан корректный, то будет создан дружелюбный кот с указанным именем и весом.
+//   Если вес указан неверно, но будет создан сердитый кот весом 5 кг.
 
-
-import java.util.Collection;
-
-public class App
+public class App 
 {
-    public static void main( String[] args )
-    {
-        Birthday.myAge();
-        
-       /* System.out.print("Мой возраст в днях: ");
-        System.out.println(Birthday.getAge(1980,7,1));
-        System.out.println(" -------------------------------------------------- ");
-        System.out.print("До следующего тысячного дня рождения:");
-        System.out.print(1000 - ((Birthday.getAge(1980,7,1)) % 1000));
-        System.out.println(" дней");
-        System.out.print("Дата следующего тысячеденного дня рождения: ");
-        System.out.println(Birthday.nextBirthday(1980,7,1));*/
+    public static void main( String[] args ) throws Exception {
+
+        System.out.println("-------------------------------");
 
 
+        Cat kitty = new Cat("Пушок", 3,false);
+        //kitty.setWeight(-8);
+        System.out.print(!kitty.isAngry() ? "Добрый " : "Злой ");
+        System.out.println(kitty.getName() + " весом " + kitty.getWeight() + " кило");
+
+        System.out.println("-------------------------------");
+
+
+        Cat cat = CatFactory.createCat("Рыжик", 51);
+        System.out.print(!cat.isAngry() ? "Добрый " : "Злой ");
+        System.out.println(cat.getName() + " весом " + cat.getWeight() + " кило");
+
+        System.out.println("-------------------------------");
 
     }
 }
