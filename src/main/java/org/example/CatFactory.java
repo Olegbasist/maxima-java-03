@@ -14,7 +14,7 @@ public class CatFactory {
         try {
             return new Cat(name, weight, false);
 
-        } catch (Exception e){
+        } catch (IncorrectCatWeightException e) {
             System.out.println(e.getMessage());
             return new Cat(name, 5, true);
         }

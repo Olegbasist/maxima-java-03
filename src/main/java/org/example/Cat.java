@@ -46,9 +46,6 @@ public class Cat {
 
     public Cat(String name, int weight, boolean isAngry) throws IncorrectCatWeightException {
         this.name = name;
-        /*if (weight < 0) {
-            throw new IncorrectCatWeightException("Пожалей котика!");
-        }*/
         setWeight(weight);
         this.isAngry = isAngry;
     }
