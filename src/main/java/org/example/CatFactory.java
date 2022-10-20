@@ -9,15 +9,16 @@ public class CatFactory {
 
 
 
-    public static Cat createCat(String name, int weight) throws Exception {
+    public static Cat createCat(String name, int weight) throws IncorrectCatWeightException {
 
-        if (weight<0){
-            throw new IncorrectCatWeightException("Покорми котика! Путь он весит хоть сколько-нибудь.");
+        try {
+            return new Cat(name, weight, false);
+
+        } catch (IncorrectCatWeightException e) {
+            System.out.println(e.getMessage());
+            return new Cat(name, 5, true);
         }
 
-        return weight < 30
-                ? new Cat(name,weight,false)
-                : new Cat(name,5,true);
 
     }
 
