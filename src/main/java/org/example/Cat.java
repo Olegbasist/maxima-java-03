@@ -29,6 +29,9 @@ public class Cat {
         if (weight < 0){
             throw new IncorrectCatWeightException("Покорми котика! Путь он весит хоть сколько-нибудь.");
         }
+        if (weight > 30){
+            throw new IncorrectCatWeightException("Пожалей котика! Он слишком тяжелый");
+        }
 
         this.weight = weight;
     }

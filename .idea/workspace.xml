@@ -51,7 +51,7 @@
       <updated>1664619732651</updated>
       <workItem from="1664619734006" duration="494000" />
       <workItem from="1664620261758" duration="1407000" />
-      <workItem from="1666259674221" duration="916000" />
+      <workItem from="1666259674221" duration="3005000" />
     </task>
     <servers />
   </component>
@@ -83,12 +83,21 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/Cat.java</url>
-          <line>43</line>
+          <line>46</line>
           <properties class="org.example.Cat" method="&lt;init&gt;">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/Cat.java</url>
+          <line>26</line>
+          <properties class="org.example.Cat" method="setWeight">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
