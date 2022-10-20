@@ -11,9 +11,9 @@ public class CatFactory {
 
     public static Cat createCat(String name, int weight) throws Exception {
 
-        if (weight<0){
+        /*if (weight<0){
             throw new IncorrectCatWeightException("Покорми котика! Путь он весит хоть сколько-нибудь.");
-        }
+        }*/
 
         return weight < 30
                 ? new Cat(name,weight,false)

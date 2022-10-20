@@ -24,10 +24,10 @@ public class Cat {
         return weight;
     }
 
-    public void setWeight(int weight) throws Exception {
+    public void setWeight(int weight) throws IncorrectCatWeightException {
 
         if (weight < 0){
-            throw new IncorrectCatWeightException("Пожалей котика!");
+            throw new IncorrectCatWeightException("Покорми котика! Путь он весит хоть сколько-нибудь.");
         }
 
         this.weight = weight;
@@ -41,12 +41,12 @@ public class Cat {
         isAngry = angry;
     }
 
-    public Cat(String name, int weight, boolean isAngry) throws Exception {
+    public Cat(String name, int weight, boolean isAngry) throws IncorrectCatWeightException {
         this.name = name;
-        if (weight < 0) {
+        /*if (weight < 0) {
             throw new IncorrectCatWeightException("Пожалей котика!");
-        }
-        this.weight = weight;
+        }*/
+        setWeight(weight);
         this.isAngry = isAngry;
     }
 
