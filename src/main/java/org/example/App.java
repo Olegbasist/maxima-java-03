@@ -41,16 +41,21 @@ public class App
 
         Path myCsv = Paths.get("AllCatWeCanGet.csv");
         boolean exist = Files.exists(myCsv);
-        System.out.println(exist ? ("Файл " +String.valueOf(myCsv)+ " существует") : "Файл не обраружен!");
+        System.out.println(exist ? ("Файл " +myCsv+ " существует") : "Файл не обраружен!");
 
-        FileWriter writer = new FileWriter(String.valueOf(myCsv), true);
-        String text = "Джордж;4;true";
+/*        FileWriter writer = new FileWriter(String.valueOf(myCsv), false);
+        String text = "Рыжик;3;true";
+        writer.write(text);
+        text = "Машка;5;false";
         writer.write("\n" +text);
-        writer.close();
+        text = "Джордж;4;false";
+        writer.write("\n" +text);
+        writer.flush();
+        writer.close();*/
 
 
         FileReader reader = new FileReader(String.valueOf(myCsv));
-        int i =0;
+        int i;
 
         while((i = reader.read())!=-1 ) {
         System.out.print((char) i);
