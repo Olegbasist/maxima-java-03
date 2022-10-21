@@ -39,9 +39,13 @@ public class App
         System.out.println("-------------------------------");
         System.out.println("-------------------------------");
 
+// Определение пути к csv файлу и проверка на существование
+
         Path myCsv = Paths.get("AllCatWeCanGet.csv");
         boolean exist = Files.exists(myCsv);
-        System.out.println(exist ? ("Файл " +myCsv+ " существует") : "Файл не обраружен!");
+        System.out.println(exist ? ("Файл " +myCsv+ " существует") : "Файл не обнаружен!");
+
+// Запись в csv файл 3-х котов
 
 /*        FileWriter writer = new FileWriter(String.valueOf(myCsv), false);
         String text = "Рыжик;3;true";
@@ -53,6 +57,7 @@ public class App
         writer.flush();
         writer.close();*/
 
+// Чтение содержимого csv файла
 
         FileReader reader = new FileReader(String.valueOf(myCsv));
         int i;
@@ -62,7 +67,19 @@ public class App
         }
         reader.close();
 
+// Проверка на существование и создание txt файла
+        System.out.println("");
+        System.out.println("---------------------------------------------------------");
+        System.out.println("Начинаю работу с txt файлами");
+        Path pathOfTxt = Paths.get("myTxt.txt");
+        System.out.print("Удаляю старый файл ...");
+        System.out.println(Files.deleteIfExists(pathOfTxt) ? " успешно" : " файл не найден");
 
+
+        System.out.print("Создаю новый txt файл ... ");
+        Files.createFile(pathOfTxt);
+        boolean existTxt = Files.exists(pathOfTxt);
+        System.out.println(existTxt ? " успешно" : " ошибка! Файл не создан!");
 
 
     }
