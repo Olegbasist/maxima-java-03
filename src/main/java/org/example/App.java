@@ -41,9 +41,9 @@ public class App
 
 // Определение пути к csv файлу и проверка на существование
 
-        Path myCsv = Paths.get("AllCatWeCanGet.csv");
+        /*Path myCsv = Paths.get("AllCatWeCanGet.csv");
         boolean exist = Files.exists(myCsv);
-        System.out.println(exist ? ("Файл " +myCsv+ " существует") : "Файл не обнаружен!");
+        System.out.println(exist ? ("Файл " +myCsv+ " существует") : "Файл не обнаружен!");*/
 
 // Запись в csv файл 3-х котов
 
@@ -59,28 +59,56 @@ public class App
 
 // Чтение содержимого csv файла
 
-        FileReader reader = new FileReader(String.valueOf(myCsv));
+        /*FileReader reader = new FileReader(String.valueOf(myCsv));
         int i;
 
         while((i = reader.read())!=-1 ) {
         System.out.print((char) i);
         }
-        reader.close();
+        reader.close();*/
 
-// Проверка на существование и создание txt файла
+// Проверка на существование, удаление и создание txt файла
         System.out.println("");
         System.out.println("---------------------------------------------------------");
         System.out.println("Начинаю работу с txt файлами");
         Path pathOfTxt = Paths.get("myTxt.txt");
-        System.out.print("Удаляю старый файл ...");
+        /*System.out.print("Удаляю старый файл ...");
         System.out.println(Files.deleteIfExists(pathOfTxt) ? " успешно" : " файл не найден");
 
-
-        System.out.print("Создаю новый txt файл ... ");
+        System.out.print("Создаю новый txt файл ...");
         Files.createFile(pathOfTxt);
         boolean existTxt = Files.exists(pathOfTxt);
-        System.out.println(existTxt ? " успешно" : " ошибка! Файл не создан!");
+        System.out.println(existTxt ? " успешно" : " ошибка! Файл не создан!");*/
 
+
+// Записываем данные в txt файл
+        System.out.println("----------------------------------------------------------");
+
+        String stringPathToTxt = String.valueOf(pathOfTxt);
+        FileWriter writer = new FileWriter(stringPathToTxt, true);
+        String text = "<Сердитый (Дружелюбный)> кот <Имя> весом <n>кг. \n";
+        writer.write(text);
+        writer.flush();
+        writer.close();
+
+        System.out.println("-----------------------------------------------------------");
+        System.out.println("Вот что получилось:");
+        System.out.println("");
+
+       /* FileReader reader2 = new FileReader(stringPathToTxt);
+        int f;
+        while ((f = reader2.read())!=-1) {
+            System.out.print((char) f);
+        }
+        reader2.close();*/
+
+        BufferedReader bufferedReader = new BufferedReader(new FileReader(stringPathToTxt));
+        String line;
+        int lineCounter = 0;
+        while ((line=bufferedReader.readLine())!=null && lineCounter<10){
+            lineCounter++;
+            System.out.println(line);
+        }
 
     }
 }
