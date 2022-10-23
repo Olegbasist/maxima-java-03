@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a582a17-05a8-4bdd-a0ec-e7bef24bf9cd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/myCats.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myCats.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AllCatWeCanGet.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AllCatWeCanGet.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myTxt.txt" beforeDir="false" afterPath="$PROJECT_DIR$/myTxt.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AllCatWeCanGet.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myCats.txt" beforeDir="false" afterPath="$PROJECT_DIR$/myCats.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myTxt.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TextTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TextTransformer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Transformable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Transformable.java" afterDir="false" />
@@ -44,9 +43,16 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Олег/Documents/GitHub/maxima-java-03"
+    "last_opened_file_path": "C:/Users/Олег/Documents/GitHub/maxima-java-03",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Олег\Documents\GitHub\maxima-java-03" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -59,7 +65,7 @@
       <workItem from="1664620261758" duration="1407000" />
       <workItem from="1665898444243" duration="3369000" />
       <workItem from="1666346857458" duration="5471000" />
-      <workItem from="1666497573343" duration="11176000" />
+      <workItem from="1666497573343" duration="15198000" />
     </task>
     <servers />
   </component>

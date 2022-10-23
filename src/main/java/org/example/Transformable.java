@@ -1,6 +1,6 @@
 package org.example;
 
-//  TODO: 29.09.2022 Для этого описать интерфейс Transformable
+//   29.09.2022 Описать интерфейс Transformable
 //   с методом void transform(String fileIn, String fileOut).
 //   Параметрами задается имя входного и имя выходного файла.
 
