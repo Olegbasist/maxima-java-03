@@ -10,20 +10,30 @@ package org.example;
 //   Параметрами задается имя входного и имя выходного файла.
 //
 //  TODO 29.09.2022 Описать класс StreamTransformer, реализующий интерфейс Transformable
-//   при помощи классов FileInputStream / FileOuputStream
+//   при помощи классов FileInputStream / FileOutputStream
 
 
+import java.io.*;
+import java.util.stream.Stream;
 
 public class App
 {
     public static void main( String[] args ) throws Exception {
 
 
-        TextTransformer transformer = new TextTransformer();
+        //TextTransformer transformer = new TextTransformer();
         String fileIn = "myCats.csv";
         String fileOut = "myCats.txt";
-        transformer.transform(fileIn,fileOut);
+        //transformer.transform(fileIn,fileOut);
 
+//Тренируемся получать поток из файла
+
+        InputStream fileInStream = new FileInputStream(fileIn);
+        Reader reader = new InputStreamReader(fileInStream);
+        BufferedReader bufferedReader = new BufferedReader(reader);
+
+        Stream<String> stream = bufferedReader.lines();
+        stream.forEachOrdered((s -> System.out.println(s)));
 
     }
 }
