@@ -9,14 +9,10 @@ package org.example;
 //  29.09.2022 Для этого описать интерфейс Transformable с методом void transform(String fileIn, String fileOut).
 //   Параметрами задается имя входного и имя выходного файла.
 //
-//  29.09.2022 Описать класс, реализующий этот интерфейс:
-//  TextTransformer, при помощи классов FileReader / FileWriter
+//  TODO 29.09.2022 Описать класс StreamTransformer, реализующий интерфейс Transformable
+//   при помощи классов FileInputStream / FileOuputStream
 
 
-import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 
 public class App
 {
