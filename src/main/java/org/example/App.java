@@ -14,6 +14,7 @@ package org.example;
 
 
 import java.io.*;
+import java.nio.charset.Charset;
 import java.util.stream.Stream;
 
 public class App
@@ -26,14 +27,47 @@ public class App
         String fileOut = "myCats.txt";
         //transformer.transform(fileIn,fileOut);
 
-//Тренируемся получать поток из файла
+// Тренируемся получать поток из файла
 
-        InputStream fileInStream = new FileInputStream(fileIn);
-        Reader reader = new InputStreamReader(fileInStream);
+        FileInputStream fileInputStream = new FileInputStream(fileIn);
+        Reader reader = new InputStreamReader(fileInputStream, Charset.forName("utf-8"));
         BufferedReader bufferedReader = new BufferedReader(reader);
+
+
 
         Stream<String> stream = bufferedReader.lines();
         stream.forEachOrdered((s -> System.out.println(s)));
+        System.out.println(reader.toString().getBytes("utf-8"));
+
+// Тренируемся читать поток побайтово в цикл
+        /*System.out.println("-----------------------------------------------------");
+
+        StringBuilder stringBuilder = new StringBuilder();
+        int r;
+        do{
+            r = fileInputStream.read();
+            stringBuilder.append((char) r);
+
+        } while (r!=-1);
+
+        //System.out.println(stringBuilder.toString().getBytes(StandardCharsets.UTF_8));
+
+       FileInputStream stream2 = new  FileInputStream(fileIn);
+        StringBuilder result = new StringBuilder();
+
+        do {
+            r = stream2.read();
+            result.append((char) r);
+        }while (r!=-1);
+        System.out.println(result.toString());*/
+
+// Тренируемся записывать в файл
+
+        FileOutputStream fileOutputStream = new FileOutputStream("test.txt");
+
+        //fileOutputStream.write(stream.toString().getBytes(Charset.forName("utf-8")));
+        fileOutputStream.close();
+
 
     }
 }
