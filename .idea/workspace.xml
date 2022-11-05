@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a582a17-05a8-4bdd-a0ec-e7bef24bf9cd" name="Changes" comment="" />
+    <list default="true" id="9a582a17-05a8-4bdd-a0ec-e7bef24bf9cd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myEngCats.txt" beforeDir="false" afterPath="$PROJECT_DIR$/myEngCats.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StreamTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StreamTransformer.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,19 +35,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Олег/Documents/GitHub/maxima-java-03&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Олег/Documents/GitHub/maxima-java-03",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "advanced.settings"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Олег\Documents\GitHub\maxima-java-03" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -57,7 +65,11 @@
       <workItem from="1664620261758" duration="1407000" />
       <workItem from="1665898444243" duration="3369000" />
       <workItem from="1666346857458" duration="5471000" />
-      <workItem from="1666497573343" duration="15512000" />
+      <workItem from="1666497573343" duration="15198000" />
+      <workItem from="1666595156375" duration="9524000" />
+      <workItem from="1666625395156" duration="99000" />
+      <workItem from="1667485875613" duration="133000" />
+      <workItem from="1667642514700" duration="11810000" />
     </task>
     <servers />
   </component>
@@ -81,7 +93,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/CatFactory.java</url>
           <line>11</line>
-          <properties class="org.example.CatFactory" method="createCat">
+          <properties class="org.example.CatFactory">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
@@ -89,7 +101,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/Cat.java</url>
-          <line>43</line>
+          <line>40</line>
           <properties class="org.example.Cat">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -98,5 +110,9 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
