@@ -1,1 +1,0 @@
-java.util.stream.ReferencePipeline$Head@3b6eb2ecjava.io.InputStreamReader@5594a1b5
