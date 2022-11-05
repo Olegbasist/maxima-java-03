@@ -26,39 +26,53 @@ public class App
         //TextTransformer transformer = new TextTransformer();
         String fileIn = "myEngCats.csv";
         String fileOut = "myEngCats.txt";
+
+        String fileInRu = "myCats.csv";
+        String fileOutRu = "myCats.txt";
         //transformer.transform(fileIn,fileOut);
 
 // Тренируемся получать поток из файла
 
-        FileInputStream fileInputStream = new FileInputStream(fileIn); ///
+        FileInputStream fileInputStream = new FileInputStream(fileInRu); ///
 
 
 
         // Вывод в консоль
         /*Reader reader = new InputStreamReader(fileInputStream, Charset.forName("utf-8"));
-        BufferedReader bufferedReader = new BufferedReader(reader);
+        //BufferedReader bufferedReader = new BufferedReader(reader);
+
+        int r;
+        StringBuilder stringBuilder = new StringBuilder();
+        do{
+            r = reader.read();
+            stringBuilder.append((char) r);
+        } while (r!=-1);
+
+        System.out.println(stringBuilder);
+*/
 
 
-
-        Stream<String> stream = bufferedReader.lines();
+        /*Stream<String> stream = bufferedReader.lines();
         stream.forEachOrdered((s -> System.out.println(s)));
         System.out.println(reader.toString().getBytes("utf-8"));*/
 
 // Тренируемся читать поток побайтово в цикл
 
-        System.out.println("-----------------------------------------------------");
+        /*System.out.println("-----------------------------------------------------");
+        FileInputStream fileInputStream1 = new FileInputStream(fileOut);
 
-        StringBuilder stringBuilder = new StringBuilder();
-        int r;
+
+        stringBuilder.delete(0,stringBuilder.capacity());
+        r=0;
         do{
-            r = fileInputStream.read();
+            r = fileInputStream1.read();
             stringBuilder.append((char) r);
 
         } while (r!=-1);
 
-        System.out.println(stringBuilder);
+        System.out.println(stringBuilder);*/
 //Записываем результат в файл
-        System.out.println("-----------------------------------------------------");
+        /*System.out.println("-----------------------------------------------------");
         FileOutputStream fileOutputStream = new FileOutputStream(fileOut);
         fileOutputStream.write(stringBuilder.toString().getBytes(StandardCharsets.UTF_8));
         fileOutputStream.flush();
@@ -66,14 +80,16 @@ public class App
 
         FileInputStream fileInputStream2 = new FileInputStream(fileOut);
         stringBuilder.delete(0,stringBuilder.capacity());
-        int s;
+        r = 0;
         do{
-            s = fileInputStream2.read();
-            stringBuilder.append((char) s);
+            r = fileInputStream2.read();
+            stringBuilder.append((char) r);
 
-        } while (s!=-1);
+        } while (r!=-1);
 
-        System.out.println(stringBuilder);
+        System.out.println(stringBuilder);*/
+
+ //////////////////////////////////////////////////////////////////////////////////////
       /* FileInputStream stream2 = new  FileInputStream(fileIn);
         StringBuilder result = new StringBuilder();
 
@@ -92,6 +108,11 @@ public class App
 
         fileOutputStream.flush();
         fileOutputStream.close();*/
+
+        // Используем StreamTransformer
+
+        StreamTransformer streamTransformer = new StreamTransformer();
+        streamTransformer.transform(fileInRu, fileOutRu);
 
 
     }
