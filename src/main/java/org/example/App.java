@@ -112,7 +112,8 @@ public class App
         // Используем StreamTransformer
 
         StreamTransformer streamTransformer = new StreamTransformer();
-        streamTransformer.transform(fileInRu, fileOutRu);
+        streamTransformer.transform(fileIn, fileOut);
+        //System.out.println(System.getProperties().getProperty("file.encoding"));
 
 
     }

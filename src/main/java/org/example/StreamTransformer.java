@@ -3,9 +3,7 @@ package org.example;
 //  TODO 29.09.2022 Описать класс StreamTransformer, реализующий интерфейс Transformable
 //   при помощи классов FileInputStream / FileOutputStream
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 
 public class StreamTransformer implements Transformable {
 
@@ -15,16 +13,15 @@ public class StreamTransformer implements Transformable {
 
         try {
             FileInputStream inputStream = new FileInputStream(fileIn);
-            StringBuilder string = new StringBuilder();
+            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
             int r;
 
-            do {
-                r = inputStream.read();
-                string.append((char) r);
-            } while (r != -1);
+            while ((r=inputStream.read()) != -1){
+                byteArrayOutputStream.write(r);
+            }
 
             FileOutputStream outputStream = new FileOutputStream(fileOut);
-            outputStream.write((string.toString().getBytes()));
+            outputStream.write((byteArrayOutputStream.toString().getBytes()));
             outputStream.flush();
             outputStream.close();
 
