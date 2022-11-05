@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a582a17-05a8-4bdd-a0ec-e7bef24bf9cd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StreamTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StreamTransformer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +60,9 @@
       <workItem from="1665898444243" duration="3369000" />
       <workItem from="1666346857458" duration="5471000" />
       <workItem from="1666497573343" duration="15198000" />
-      <workItem from="1666595156375" duration="9247000" />
+      <workItem from="1666595156375" duration="9524000" />
+      <workItem from="1666625395156" duration="99000" />
+      <workItem from="1667485875613" duration="133000" />
     </task>
     <servers />
   </component>
