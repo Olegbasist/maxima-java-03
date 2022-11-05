@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a582a17-05a8-4bdd-a0ec-e7bef24bf9cd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myCats.csv" beforeDir="false" afterPath="$PROJECT_DIR$/myCats.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myCats.txt" beforeDir="false" afterPath="$PROJECT_DIR$/myCats.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myEngCats.txt" beforeDir="false" afterPath="$PROJECT_DIR$/myEngCats.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StreamTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StreamTransformer.java" afterDir="false" />
     </list>
@@ -51,6 +49,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Олег\Documents\GitHub\maxima-java-03" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -68,7 +69,7 @@
       <workItem from="1666595156375" duration="9524000" />
       <workItem from="1666625395156" duration="99000" />
       <workItem from="1667485875613" duration="133000" />
-      <workItem from="1667642514700" duration="10066000" />
+      <workItem from="1667642514700" duration="11810000" />
     </task>
     <servers />
   </component>
@@ -92,7 +93,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/CatFactory.java</url>
           <line>11</line>
-          <properties class="org.example.CatFactory" method="createCat">
+          <properties class="org.example.CatFactory">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
@@ -101,7 +102,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/Cat.java</url>
           <line>40</line>
-          <properties class="org.example.Cat" method="&lt;init&gt;">
+          <properties class="org.example.Cat">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>

@@ -9,7 +9,7 @@ package org.example;
 //  29.09.2022 Для этого описать интерфейс Transformable с методом void transform(String fileIn, String fileOut).
 //   Параметрами задается имя входного и имя выходного файла.
 //
-//  TODO 29.09.2022 Описать класс StreamTransformer, реализующий интерфейс Transformable
+//   29.09.2022 Описать класс StreamTransformer, реализующий интерфейс Transformable
 //   при помощи классов FileInputStream / FileOutputStream
 
 
@@ -112,9 +112,8 @@ public class App
         // Используем StreamTransformer
 
         StreamTransformer streamTransformer = new StreamTransformer();
-        streamTransformer.transform(fileIn, fileOut);
+        streamTransformer.transform(fileInRu, fileOutRu);
         //System.out.println(System.getProperties().getProperty("file.encoding"));
-
 
     }
 }

@@ -1,6 +1,6 @@
 package org.example;
 
-//  TODO 29.09.2022 Описать класс StreamTransformer, реализующий интерфейс Transformable
+//  29.09.2022 Описать класс StreamTransformer, реализующий интерфейс Transformable
 //   при помощи классов FileInputStream / FileOutputStream
 
 import java.io.*;

@@ -1,4 +1,1 @@
-Max;3;true
-Kitty;5;false
-George;4;false
-Hussy;2;false
+s
