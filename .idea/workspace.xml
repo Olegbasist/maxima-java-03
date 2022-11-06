@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a582a17-05a8-4bdd-a0ec-e7bef24bf9cd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/OnlyCat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/OnlyDog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/QueueKitchen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/StackKitchen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/AnimalKitchen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/AnimalKitchen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Cat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Dog.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -82,7 +81,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/Cat.java</url>
-          <line>46</line>
+          <line>41</line>
           <properties class="org.example.Cat" method="&lt;init&gt;">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -91,7 +90,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/Cat.java</url>
-          <line>26</line>
+          <line>21</line>
           <properties class="org.example.Cat" method="setWeight">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />

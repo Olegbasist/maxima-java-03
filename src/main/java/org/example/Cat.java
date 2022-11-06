@@ -1,12 +1,7 @@
 package org.example;
 
-// 29.09.2022 Описать класс Cat (кот) со свойствами:
-//  name — имя, строка.
-//  weight — вес, число int
-//  isAngry — сердитость, boolean
-//  Описать геттеры и сеттеры всех свойств.
 
-public class Cat implements OnlyCat{
+public class Cat {
 
     private String name;
     private int weight;
