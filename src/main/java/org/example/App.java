@@ -33,5 +33,10 @@ public class App
 
         System.out.println("-------------------------------");
 
+        Dog doggy = new Dog("Барбос", 18, false);
+        System.out.print(!doggy.isAngry() ? "Добрый " : "Злой ");
+        System.out.println(doggy.getName() + " весом " + doggy.getWeight() + " кило");
+
+        System.out.println("-------------------------------");
     }
 }
