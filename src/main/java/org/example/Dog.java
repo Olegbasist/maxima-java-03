@@ -3,7 +3,7 @@ package org.example;
 //  03.11.2022 Описать класс Dog с методами, аналогичными классу Cat,
 //  но не имеющего с ним общих предков.
 
-public class Dog {
+public class Dog implements OnlyDog{
 
     private String name;
     private int weight;

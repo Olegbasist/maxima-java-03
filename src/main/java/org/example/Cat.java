@@ -6,7 +6,7 @@ package org.example;
 //  isAngry — сердитость, boolean
 //  Описать геттеры и сеттеры всех свойств.
 
-public class Cat {
+public class Cat implements OnlyCat{
 
     private String name;
     private int weight;
