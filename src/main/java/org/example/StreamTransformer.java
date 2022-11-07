@@ -30,8 +30,8 @@ public class StreamTransformer implements Transformable {
 
                /* writer.write(((Boolean.parseBoolean(cellData[2])) ? "Сердитый" : "Дружелюбный") + " кот " + cellData[0] + " весом " + cellData[1] + "кг.");
                 writer.newLine();
-                writer.flush();*/
-            }
+                writer.flush();
+            }*/
 
 
             /*FileOutputStream outputStream = new FileOutputStream(fileOut);
