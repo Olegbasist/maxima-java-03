@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a582a17-05a8-4bdd-a0ec-e7bef24bf9cd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StreamTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StreamTransformer.java" afterDir="false" />
-    </list>
+    <list default="true" id="9a582a17-05a8-4bdd-a0ec-e7bef24bf9cd" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,7 +65,7 @@
       <workItem from="1666625395156" duration="99000" />
       <workItem from="1667485875613" duration="133000" />
       <workItem from="1667642514700" duration="11810000" />
-      <workItem from="1667834424022" duration="1618000" />
+      <workItem from="1667834424022" duration="2309000" />
     </task>
     <servers />
   </component>
