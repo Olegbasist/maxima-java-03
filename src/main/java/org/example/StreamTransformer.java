@@ -23,8 +23,13 @@ public class StreamTransformer implements Transformable {
             }
 
 
-            String str = byteArrayOutputStream.toString("UTF-8"); // Еще один способ прочитать байты в правильной кодировке в строку
+            String str = byteArrayOutputStream.toString(StandardCharsets.UTF_8); // Еще один способ прочитать байты в правильной кодировке в строку
             System.out.println(str);
+            System.out.println("////////////////////////////////////");
+            String[] cellData = str.split(";");
+            System.out.println(((Boolean.parseBoolean(cellData[2])) ? "Сердитый" : "Дружелюбный") + " кот " + cellData[0] + " весом " + cellData[1] + "кг.");
+            
+
 
 
 
