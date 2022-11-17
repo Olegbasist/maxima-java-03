@@ -23,7 +23,7 @@ public class StreamTransformer implements Transformable {
             byte[] buffer = new byte[inputStream.available()];
             inputStream.read(buffer);
 
-            String str = new String(buffer, StandardCharsets.UTF_8); // Еще способ прочитать с указанием кодировки
+            String str = new String(buffer, StandardCharsets.UTF_8); // Еще один способ прочитать с указанием кодировки
 
             String[] linesData = str.split("\n"); // Разделение на строки
             for (String inputLine : linesData) {
