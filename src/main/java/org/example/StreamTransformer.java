@@ -3,7 +3,9 @@ package org.example;
 //  29.09.2022 Описать класс StreamTransformer, реализующий интерфейс Transformable
 //   при помощи классов FileInputStream / FileOutputStream
 
+
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 
 public class StreamTransformer implements Transformable {
 
@@ -13,17 +15,32 @@ public class StreamTransformer implements Transformable {
 
         try {
             FileInputStream inputStream = new FileInputStream(fileIn);
+            FileOutputStream outputStream = new FileOutputStream(fileOut);
             ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-            int r;
 
+            int r;
+            
+            // Чтение файла в массив байтов
             while ((r=inputStream.read()) != -1){
                 byteArrayOutputStream.write(r);
             }
 
-            FileOutputStream outputStream = new FileOutputStream(fileOut);
-            outputStream.write((byteArrayOutputStream.toString().getBytes()));
+            String str = byteArrayOutputStream.toString(StandardCharsets.UTF_8); // Способ прочитать байты в правильной кодировке в строку
+
+            String[] linesData = str.split("\n"); // Разделение на строки
+            for (String inputLine : linesData) {
+
+                String[] cellData = inputLine.split(";"); // Разделение на значения (столбцы)
+                String outputLine = (((Boolean.parseBoolean(cellData[2])) ? "Сердитый" : "Дружелюбный") + " кот " + cellData[0] + " весом " + cellData[1] + "кг." + "\n");
+
+                outputStream.write(outputLine.getBytes()); // Запись в файл
+
+            }
+
             outputStream.flush();
             outputStream.close();
+
+
 
         }catch (IOException e) {
             e.printStackTrace();
