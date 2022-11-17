@@ -4,26 +4,28 @@ package org.example;
 //   при помощи классов FileInputStream / FileOutputStream
 
 
-
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.nio.charset.StandardCharsets;
 
-public class StreamTransformer implements Transformable {
+public class StreamTransformerToLarge implements Transformable {
 
 
     @Override
-    public void transform(String fileIn, String fileOut) {
+    public void transform(String fileIn, String fileOut) throws IOException {
 
         try {
             FileInputStream inputStream = new FileInputStream(fileIn);
             FileOutputStream outputStream = new FileOutputStream(fileOut);
+            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
 
-            byte[] buffer = new byte[inputStream.available()];
-            inputStream.read(buffer);
+            int r;
+            
+            // Чтение файла в массив байтов
+            while ((r=inputStream.read()) != -1){
+                byteArrayOutputStream.write(r);
+            }
 
-            String str = new String(buffer, StandardCharsets.UTF_8); // Еще способ прочитать с указанием кодировки
+            String str = byteArrayOutputStream.toString(StandardCharsets.UTF_8); // Способ прочитать байты в правильной кодировке в строку
 
             String[] linesData = str.split("\n"); // Разделение на строки
             for (String inputLine : linesData) {
