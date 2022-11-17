@@ -33,7 +33,7 @@ public class App
 
 // Тренируемся получать поток из файла
 
-        FileInputStream fileInputStream = new FileInputStream(fileInRu); ///
+        //FileInputStream fileInputStream = new FileInputStream(fileInRu); ///
 
 
 
@@ -111,7 +111,7 @@ public class App
 
         // Используем StreamTransformer
 
-        StreamTransformer streamTransformer = new StreamTransformer();
+        StreamTransformerBuffered streamTransformer = new StreamTransformerBuffered();
         streamTransformer.transform(fileInRu, fileOutRu);
         //System.out.println(System.getProperties().getProperty("file.encoding"));
 
