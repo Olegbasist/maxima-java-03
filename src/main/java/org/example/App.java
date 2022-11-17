@@ -13,11 +13,6 @@ package org.example;
 //   при помощи классов FileInputStream / FileOutputStream
 
 
-import java.io.*;
-import java.nio.charset.Charset;
-import java.nio.charset.StandardCharsets;
-import java.util.stream.Stream;
-
 public class App
 {
     public static void main( String[] args ) throws Exception {
@@ -111,7 +106,7 @@ public class App
 
         // Используем StreamTransformer
 
-        StreamTransformerBuffered streamTransformer = new StreamTransformerBuffered();
+        StreamTransformer streamTransformer = new StreamTransformer();
         streamTransformer.transform(fileInRu, fileOutRu);
         //System.out.println(System.getProperties().getProperty("file.encoding"));
 
