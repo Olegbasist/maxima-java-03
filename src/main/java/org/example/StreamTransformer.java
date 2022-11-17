@@ -15,6 +15,8 @@ public class StreamTransformer implements Transformable {
 
         try {
             FileInputStream inputStream = new FileInputStream(fileIn);
+            FileOutputStream outputStream = new FileOutputStream(fileOut);
+
             ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
             int r;
 
@@ -32,11 +34,16 @@ public class StreamTransformer implements Transformable {
             for (String line : linesData) {
 
                 String[] cellData = line.split(";");
-                System.out.println(((Boolean.parseBoolean(cellData[2])) ? "Сердитый" : "Дружелюбный") + " кот " + cellData[0] + " весом " + cellData[1] + " кг.");
+                System.out.println(((Boolean.parseBoolean(cellData[2])) ? "Сердитый" : "Дружелюбный") + " кот " + cellData[0] + " весом " + cellData[1] + "кг.");
+
+                String outLine = (((Boolean.parseBoolean(cellData[2])) ? "Сердитый" : "Дружелюбный") + " кот " + cellData[0] + " весом " + cellData[1] + "кг." + "\n");
+
+                outputStream.write(outLine.getBytes());
+
             }
 
-
-
+            outputStream.flush();
+            outputStream.close();
 
 
 
