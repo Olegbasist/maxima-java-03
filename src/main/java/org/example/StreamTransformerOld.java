@@ -4,10 +4,12 @@ package org.example;
 //   при помощи классов FileInputStream / FileOutputStream
 
 
-import java.io.*;
+import java.io.ByteArrayOutputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
-public class StreamTransformer implements Transformable {
+public class StreamTransformerOld implements Transformable {
 
 
     @Override
@@ -26,15 +28,9 @@ public class StreamTransformer implements Transformable {
             String str = byteArrayOutputStream.toString(StandardCharsets.UTF_8); // Еще один способ прочитать байты в правильной кодировке в строку
             System.out.println(str);
             System.out.println("////////////////////////////////////");
-
-            String[] linesData = str.split("\n");
-
-            for (String line : linesData) {
-
-                String[] cellData = line.split(";");
-                System.out.println(((Boolean.parseBoolean(cellData[2])) ? "Сердитый" : "Дружелюбный") + " кот " + cellData[0] + " весом " + cellData[1] + " кг.");
-            }
-
+            
+            String[] cellData = str.split(";");
+            System.out.println(((Boolean.parseBoolean(cellData[2])) ? "Сердитый" : "Дружелюбный") + " кот " + cellData[0] + " весом " + cellData[1] + "кг.");
 
 
 
