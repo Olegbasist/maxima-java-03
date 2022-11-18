@@ -25,21 +25,21 @@ public class App
 
         Cat kitty = new Cat("Пушок", 3,false);
         //kitty.setWeight(-8);
-        System.out.print(!kitty.isAngry() ? "Добрый " : "Злой ");
-        System.out.println(kitty.getName() + " весом " + kitty.getWeight() + " кило");
+        //System.out.print(!kitty.isAngry() ? "Добрый " : "Злой ");
+       // System.out.println(kitty.getName() + " весом " + kitty.getWeight() + " кило");
 
         System.out.println("-------------------------------");
 
 
         Cat cat = CatFactory.createCat("Рыжик", 88);
-        System.out.print(!cat.isAngry() ? "Добрый " : "Злой ");
-        System.out.println(cat.getName() + " весом " + cat.getWeight() + " кило");
+        //System.out.print(!cat.isAngry() ? "Добрый " : "Злой ");
+        //System.out.println(cat.getName() + " весом " + cat.getWeight() + " кило");
 
         System.out.println("-------------------------------");
 
         Dog doggy = new Dog("Барбос", 18, false);
-        System.out.print(!doggy.isAngry() ? "Добрый " : "Злой ");
-        System.out.println(doggy.getName() + " весом " + doggy.getWeight() + " кило");
+        //System.out.print(!doggy.isAngry() ? "Добрый " : "Злой ");
+        //System.out.println(doggy.getName() + " весом " + doggy.getWeight() + " кило");
 
         System.out.println("-------------------------------");
 
@@ -50,8 +50,16 @@ public class App
 
         StackKitchen <Cat> stackKitchen = new StackKitchen<>();
         stackKitchen.add(cat);
-
         stackKitchen.add(kitty);
+        stackKitchen.add(kitty);
+        stackKitchen.add(kitty);
+        System.out.println(stackKitchen.getAnimals());
+
+        //stackKitchen.feedAll();
+        stackKitchen.feed();
+        stackKitchen.feed();
+
+        System.out.println(stackKitchen.getAnimals());
 
 
 

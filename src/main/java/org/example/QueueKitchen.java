@@ -9,7 +9,7 @@ public class QueueKitchen implements AnimalKitchen{
     }
 
     @Override
-    public void feed(Object animal) {
+    public void feed() {
 
     }
 }

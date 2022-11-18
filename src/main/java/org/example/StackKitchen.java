@@ -10,16 +10,19 @@ public class StackKitchen <T> implements AnimalKitchen{
 
     @Override
     public void add(Object animal) {
-        animals.add((T) animal);
-        System.out.println(animals.lastIndexOf(animal));
-        animals.forEach(a -> System.out.println(a));
-
-
-
+        animals.add(0, (T) animal);
     }
 
     @Override
-    public void feed(Object animal) {
+    public void feed() {
+       animals.remove(0);
+    }
 
+    public void feedAll() {
+        animals.clear();
+    }
+
+    public ArrayList<T> getAnimals() {
+        return animals;
     }
 }
