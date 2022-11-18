@@ -1,9 +1,20 @@
 package org.example;
 
-public class StackKitchen implements AnimalKitchen{
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class StackKitchen <T> implements AnimalKitchen{
+
+
+    private ArrayList<T> animals = new ArrayList<>();
 
     @Override
     public void add(Object animal) {
+        animals.add((T) animal);
+        System.out.println(animals.lastIndexOf(animal));
+        animals.forEach(a -> System.out.println(a));
+
+
 
     }
 

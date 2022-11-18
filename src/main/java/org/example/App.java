@@ -13,7 +13,10 @@ package org.example;
 //      (подсказка Arraylist<>getAnimals) -> (уже делал в модуле 2 дз TransportToCityPlusLogistic)
 //  Подсказка из видео: В одну очередь ставить кошек и собак нельзя, но мы не знаем кого из них подадут на вход.
 
-public class App 
+import java.util.ArrayList;
+import java.util.PriorityQueue;
+
+public class App
 {
     public static void main( String[] args ) throws Exception {
 
@@ -39,6 +42,20 @@ public class App
         System.out.println(doggy.getName() + " весом " + doggy.getWeight() + " кило");
 
         System.out.println("-------------------------------");
+
+        ArrayList<Cat> animalsList = new ArrayList<>();
+        animalsList.add(cat);
+        animalsList.add(kitty);
+        //System.out.println(animalsList.get(0).getName());
+
+        StackKitchen <Cat> stackKitchen = new StackKitchen<>();
+        stackKitchen.add(cat);
+
+        stackKitchen.add(kitty);
+
+
+
+
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //Подсказка с ArrayList из транспортов ту сити:
@@ -78,6 +95,9 @@ public class App
 //        System.out.println("Вот какие транспорты получились:");
 //        logistics.listOfVehicles();
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // Намётки:
+        // ObjectOutputStream и ObjectInputStream. = конвеерные потоки.
+
     }
 
 
