@@ -11,11 +11,13 @@ public class StackKitchen <T> implements AnimalKitchen{
     @Override
     public void add(Object animal) {
         animals.add(0, (T) animal);
+        // animals.add( (T) animal); // Вариант 2
     }
 
     @Override
     public void feed() {
        animals.remove(0);
+       //animals.remove(animals.size()-1); // Вариант 2
     }
 
     public void feedAll() {

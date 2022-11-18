@@ -43,23 +43,39 @@ public class App
 
         System.out.println("-------------------------------");
 
-        ArrayList<Cat> animalsList = new ArrayList<>();
+        /*ArrayList<Cat> animalsList = new ArrayList<>();
         animalsList.add(cat);
-        animalsList.add(kitty);
+        animalsList.add(kitty);*/
         //System.out.println(animalsList.get(0).getName());
 
-        StackKitchen <Cat> stackKitchen = new StackKitchen<>();
+        /*StackKitchen <Cat> stackKitchen = new StackKitchen<>();
         stackKitchen.add(cat);
         stackKitchen.add(kitty);
         stackKitchen.add(kitty);
-        stackKitchen.add(kitty);
+        stackKitchen.add(doggy);
         System.out.println(stackKitchen.getAnimals());
 
         //stackKitchen.feedAll();
         stackKitchen.feed();
         stackKitchen.feed();
 
-        System.out.println(stackKitchen.getAnimals());
+        System.out.println(stackKitchen.getAnimals());*/
+
+        QueueKitchen <Cat> queueKitchen = new QueueKitchen<>();
+        queueKitchen.add(cat);
+        queueKitchen.add(kitty);
+        queueKitchen.add(cat);
+        queueKitchen.add(cat);
+
+        System.out.println(queueKitchen.getAnimals());
+
+        queueKitchen.feed();
+        System.out.println(queueKitchen.getAnimals());
+        queueKitchen.feed();
+        System.out.println(queueKitchen.getAnimals());
+        queueKitchen.feed();
+        System.out.println(queueKitchen.getAnimals());
+
 
 
 

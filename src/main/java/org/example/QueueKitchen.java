@@ -1,15 +1,28 @@
 package org.example;
 
-public class QueueKitchen implements AnimalKitchen{
+import java.util.ArrayList;
+import java.util.Arrays;
 
+public class QueueKitchen <T> implements AnimalKitchen{
+
+    private ArrayList<T> animals = new ArrayList<>();
 
     @Override
     public void add(Object animal) {
-
+        animals.add( (T) animal);
     }
 
     @Override
     public void feed() {
-
+        animals.remove(0);
     }
+
+    public void feedAll() {
+        animals.clear();
+    }
+
+    public ArrayList<T> getAnimals() {
+        return animals;
+    }
+
 }
