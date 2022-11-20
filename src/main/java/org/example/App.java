@@ -66,6 +66,8 @@ public class App
         queueKitchen.add(kitty);
         queueKitchen.add(cat);
         queueKitchen.add(cat);
+        queueKitchen.add(doggy);
+        queueKitchen.add(11);
 
         System.out.println(queueKitchen.getAnimals());
 

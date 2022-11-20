@@ -1,9 +1,8 @@
 package org.example;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
-public class QueueKitchen <T> implements AnimalKitchen{
+public class QueueKitchenForEveryone<T> implements AnimalKitchen{
 
 
     private ArrayList<T> animals = new ArrayList<>();
