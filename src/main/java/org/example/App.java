@@ -62,21 +62,23 @@ public class App
         System.out.println(stackKitchen.getAnimals());*/
 
         QueueKitchen <Cat> queueKitchen = new QueueKitchen<>();
+        queueKitchen.add(11);
         queueKitchen.add(cat);
         queueKitchen.add(kitty);
+        queueKitchen.feed();
         queueKitchen.add(cat);
-        queueKitchen.add(cat);
+        //queueKitchen.add(cat);
         queueKitchen.add(doggy);
-        queueKitchen.add(11);
+        //queueKitchen.add(11);
 
-        System.out.println(queueKitchen.getAnimals());
+        //System.out.println(queueKitchen.getAnimals());
 
         queueKitchen.feed();
-        System.out.println(queueKitchen.getAnimals());
+        //System.out.println(queueKitchen.getAnimals());
         queueKitchen.feed();
-        System.out.println(queueKitchen.getAnimals());
+        //System.out.println(queueKitchen.getAnimals());
         queueKitchen.feed();
-        System.out.println(queueKitchen.getAnimals());
+       // System.out.println(queueKitchen.getAnimals());
 
 
 
