@@ -2,47 +2,52 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class QueueKitchen <T> implements AnimalKitchen {
-
 
 
     private ArrayList<T> animals = new ArrayList<>();
 
     @Override
     public void add(Object animal) {
-        Class onKitchen = !animals.isEmpty() ? animals.get(0).getClass() : null;
-        Class newAnimal = animal.getClass();
-        String actualAnimal = newAnimal.equals(Cat.class)
-                ? "кот" : newAnimal.equals(Dog.class)
-                ? "пёс" :
-                newAnimal.toString();
+        if (animal.getClass().equals(Cat.class) || animal.getClass().equals(Dog.class)) {
 
-        if (animals.isEmpty() || animals.get(0).getClass().equals(animal.getClass())) {
-            System.out.println(animals.isEmpty()
-                    ? "Первый "
-                    + actualAnimal
-                    + " пришел на кухню ..."
-                    : "Еще один голодный "
-                    + actualAnimal
-                    + " пришел на кухню ...");
+            Class onKitchen = !animals.isEmpty() ? animals.get(0).getClass() : null;
+            Class newAnimal = animal.getClass();
+            String actualAnimal = newAnimal.equals(Cat.class)
+                    ? "кот" : newAnimal.equals(Dog.class)
+                    ? "пёс" :
+                    newAnimal.toString();
 
-            animals.add((T) animal);
+            if (animals.isEmpty() || animals.get(0).getClass().equals(animal.getClass())) {
+                System.out.println(animals.isEmpty()
+                        ? "Первый "
+                        + actualAnimal
+                        + " пришел на кухню ..."
+                        : "Еще один голодный "
+                        + actualAnimal
+                        + " пришел на кухню ...");
+
+                animals.add((T) animal);
+            } else {
+
+
+                System.out.println("На кухне уже "
+                        + (onKitchen.equals(Cat.class)
+                        ? "мяукают коты"
+                        : onKitchen.equals(Dog.class)
+                        ? "поскуливают собаки" : newAnimal)
+                        + " и если добавить "
+                        + (newAnimal.equals(Cat.class)
+                        ? "котика"
+                        : newAnimal.equals(Dog.class)
+                        ? "собаку" : newAnimal)
+                        + " они подерутся ...");
+
+            }
         }else {
-
-
-            System.out.println("На кухне уже "
-                    + (onKitchen.equals(Cat.class)
-                    ? "мяукают коты"
-                    : onKitchen.equals(Dog.class)
-                    ? "поскуливают собаки" : newAnimal)
-                    +" и если добавить "
-                    + (newAnimal.equals(Cat.class)
-                    ? "котика"
-                    : newAnimal.equals(Dog.class)
-                    ? "собаку" : newAnimal)
-                    + " они подерутся ...");
-
+            System.out.println("Эта кухня только для котов и собак!");
         }
     }
 
@@ -63,12 +68,14 @@ public class QueueKitchen <T> implements AnimalKitchen {
     }
 
     public void feedAll() {
-        animals.clear();
-        System.out.println("Все питомцы внезапно сыты!");
+        if (!animals.isEmpty()) {
+            animals.clear();
+            System.out.println("Все питомцы внезапно сыты!");
+        }
     }
 
-    public ArrayList<T> getAnimals() {
-        return animals;
+    public void getAnimals() {
+        System.out.println(animals);
     }
 
 }

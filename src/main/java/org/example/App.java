@@ -48,25 +48,26 @@ public class App
         animalsList.add(kitty);*/
         //System.out.println(animalsList.get(0).getName());
 
-        /*StackKitchen <Cat> stackKitchen = new StackKitchen<>();
+        StackKitchen <Cat> stackKitchen = new StackKitchen<>();
         stackKitchen.add(cat);
         stackKitchen.add(kitty);
         stackKitchen.add(kitty);
         stackKitchen.add(doggy);
-        System.out.println(stackKitchen.getAnimals());
+        stackKitchen.getAnimals();
 
         //stackKitchen.feedAll();
         stackKitchen.feed();
         stackKitchen.feed();
 
-        System.out.println(stackKitchen.getAnimals());*/
+        stackKitchen.getAnimals();
 
-        QueueKitchen <Cat> queueKitchen = new QueueKitchen<>();
+        /*QueueKitchen <Cat> queueKitchen = new QueueKitchen<>();
         queueKitchen.add(11);
         queueKitchen.add(cat);
         queueKitchen.add(kitty);
         queueKitchen.feed();
         queueKitchen.add(cat);
+        queueKitchen.getAnimals();
         //queueKitchen.add(cat);
         queueKitchen.add(doggy);
         //queueKitchen.add(11);
@@ -78,7 +79,7 @@ public class App
         queueKitchen.feed();
         //System.out.println(queueKitchen.getAnimals());
         queueKitchen.feed();
-       // System.out.println(queueKitchen.getAnimals());
+       // System.out.println(queueKitchen.getAnimals());*/
 
 
 
