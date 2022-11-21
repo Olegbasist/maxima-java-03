@@ -1,9 +1,15 @@
 package org.example;
 
+//  03.11.2022 Описать класс Dog с методами аналогичными классу Cat, но не имеющего с ним общих предков.
+//
+//  03.11.2022 Описать интерфейс AnimalKitchen — описывает кормление группы любых животных.
+//  Методы:
+//      void add ( экземпляр животного) — добавить животное в очередь.
+//      void feed() - покормить очередное животное (исключить его из очереди на кормление).
+//
+//  03.11.2022 Описать два класса QueueKitchen и StackKitchen,
+//  реализующие кормление животных по принципам FIFO и LIFO соответственно. (Подсказка: это конвейер)
 
-
-import java.util.ArrayList;
-import java.util.PriorityQueue;
 
 public class App
 {
@@ -65,52 +71,7 @@ public class App
         queueKitchen.feed();
        // System.out.println(queueKitchen.getAnimals());*/
 
-
-
-
-
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    //Подсказка с ArrayList из транспортов ту сити:
-        // Добавляем все вихикл в ЭррейЛист и затем ищем минимум
-
-        /*ArrayList<Transport> arrOfTransports = new ArrayList<>();
-        //arrOfTransports.add(vehicles[0]);
-        //arrOfTransports.add(vehicles[1]);
-        Collections.addAll(arrOfTransports, vehicles);
-        arrOfTransports.forEach(elem -> System.out.println(elem));
-        for (Transport obj: arrOfTransports){
-            //Collections.addAll(objectsArrayList, obj.getPrice(city2));
-            float costOfDelivery = obj.getPrice(city2);
-            //System.out.println(obj);
-            System.out.print(obj.getName());
-            System.out.print(" доставит груз за - ");
-            System.out.println(costOfDelivery);
-            if (minCostOfDelivery > costOfDelivery && costOfDelivery !=0) {
-                minCostOfDelivery = costOfDelivery;
-                cheapestVehicle = obj;
-            };*/
-
-
-        // Посылаем объекты в Logistics заполняя ими vehicles
-
-
-
-       // Logistics logistics = new Logistics(vehicles);
-
-
-        /*logisticsWithoutList.setVehicles(vehicles[0]);
-        logisticsWithoutList.setVehicles(vehicles[1]);
-        logisticsWithoutList.setVehicles(vehicles[2]);
-        logisticsWithoutList.setVehicles(vehicles[3]);
-        logisticsWithoutList.setVehicles(vehicles[4]);*/
-        //logisticsWithoutList.setVehicles(new Truck("Грузищще", 5864, 120, 1.1f));
-//        System.out.println("Вот какие транспорты получились:");
-//        logistics.listOfVehicles();
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    // Намётки:
-        // ObjectOutputStream и ObjectInputStream. = конвеерные потоки.
-
+        
     }
 
 
