@@ -43,11 +43,6 @@ public class App
 
         System.out.println("-------------------------------");
 
-        /*ArrayList<Cat> animalsList = new ArrayList<>();
-        animalsList.add(cat);
-        animalsList.add(kitty);*/
-        //System.out.println(animalsList.get(0).getName());
-
         StackKitchen <Cat> stackKitchen = new StackKitchen<>();
         stackKitchen.add(cat);
         stackKitchen.add(kitty);
