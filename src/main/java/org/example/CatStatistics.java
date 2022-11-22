@@ -9,9 +9,7 @@ package org.example;
 //      Map<String, List<Cat>> groupCatsByFirstLetter (ArrayList<Cat> cats) — возвращает список котов сгруппировав их по первой букве имени и отсортировав группировку по возрастанию.
 
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class CatStatistics {
 
@@ -23,8 +21,14 @@ public class CatStatistics {
         //Проверка сколько котов поместилось в коллекцию
         System.out.print("Котов в мапе: ");
         System.out.println(catsMap.size());
+        //System.out.println(catsMap.get("Пушок").getName());
 
-        
+        for(String key: catsMap.keySet()){
+            System.out.println(key);
+            //System.out.println(catsMap.get(catsMap.get(key)));
+        }
+
+
         return cats;
     }
 
