@@ -3,7 +3,7 @@ package org.example;
 //  07.10.2022 Описать класс CatStatistics со статическими методами:
 //      TODO: 07.10.2022 ArrayList<Cat> sortByNameAscending(ArrayList<Cat> cats)
 //          — возвращает список котов, отсортировав по имени по возрастанию.
-//      TODO: 07.10.2022 ArrayList<Cat> sortByWeightDescending(ArrayList<Cat> cats)
+//      07.10.2022 ArrayList<Cat> sortByWeightDescending(ArrayList<Cat> cats)
 //          — возвращает список котов, отсортировав по убыванию веса.
 //      TODO: 07.10.2022 ArrayList<Cat> removeFirstAndLast (ArrayList<Cat> cats)
 //          — возвращает список котов кроме первого и последнего.
