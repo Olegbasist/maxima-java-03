@@ -1,14 +1,12 @@
 package org.example;
 
-//  03.11.2022 Описать класс Dog с методами аналогичными классу Cat, но не имеющего с ним общих предков.
-//
-//  03.11.2022 Описать интерфейс AnimalKitchen — описывает кормление группы любых животных.
-//  Методы:
-//      void add ( экземпляр животного) — добавить животное в очередь.
-//      void feed() - покормить очередное животное (исключить его из очереди на кормление).
-//
-//  03.11.2022 Описать два класса QueueKitchen и StackKitchen,
-//  реализующие кормление животных по принципам FIFO и LIFO соответственно. (Подсказка: это конвейер)
+// TODO: 07.10.2022 Описать класс CatStatistics со статическими методами:
+//      ArrayList<Cat> sortByNameAscending(ArrayList<Cat> cats) — возвращает список котов, отсортировав по имени по возрастанию.
+//      ArrayList<Cat> sortByWeightDescending(ArrayList<Cat> cats) — возвращает список котов, отсортировав по убыванию веса.
+//      ArrayList<Cat> removeFirstAndLast (ArrayList<Cat> cats) — возвращает список котов кроме первого и последнего.
+//      Cat findFirstNonAngryCat (ArrayList<Cat> cats) — возвращает первого не-сердитого кота в списке.
+//      int getCommonWeight(ArrayList<Cat> cats, boolean onlyAngry) — возвращает суммарный вес всех котов (если параметр onlyAngry равен true, то только сердитых котов).
+//      Map<String, List<Cat>> groupCatsByFirstLetter (ArrayList<Cat> cats) — возвращает список котов сгруппировав их по первой букве имени и отсортировав группировку по возрастанию.
 
 
 public class App
