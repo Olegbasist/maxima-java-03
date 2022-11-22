@@ -34,6 +34,15 @@ public class CatStatistics {
             //System.out.println(catsMap.get(catsMap.get(key)));
         }
 
+        //Перемешиваем Array
+        Collections.shuffle(cats);
+        cats.forEach(cat -> System.out.println(cat.getName()));
+        System.out.println("---------------------------------------------");
+        Collections.reverse(cats);
+        cats.forEach(cat -> System.out.println(cat.getName()));
+        System.out.println("----------------------------------------------");
+
+
 
         return cats;
     }
