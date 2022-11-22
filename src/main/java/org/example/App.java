@@ -53,12 +53,12 @@ public class App
         cats.add(cat2);
         cats.add(kitty);
 
-        cats.forEach(e -> System.out.println(e.getName() + " весом " + e.getWeight() + "кг," + " злой? - " + e.isAngry()));
+        //cats.forEach(e -> System.out.println(e.getName() + " весом " + e.getWeight() + "кг," + " злой? - " + e.isAngry()));
 
         //Собираем статистику ...
         CatStatistics catStatistics = new CatStatistics();
         ArrayList <Cat> catByNameAscanding = new ArrayList<>(catStatistics.sortByNameAscending(cats));
-        catByNameAscanding.forEach(e-> System.out.println(e.getName()));
+        //catByNameAscanding.forEach(e-> System.out.println(e.getName()));
 
 
 

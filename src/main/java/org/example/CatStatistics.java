@@ -8,11 +8,23 @@ package org.example;
 //      int getCommonWeight(ArrayList<Cat> cats, boolean onlyAngry) — возвращает суммарный вес всех котов (если параметр onlyAngry равен true, то только сердитых котов).
 //      Map<String, List<Cat>> groupCatsByFirstLetter (ArrayList<Cat> cats) — возвращает список котов сгруппировав их по первой букве имени и отсортировав группировку по возрастанию.
 
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class CatStatistics {
 
     ArrayList<Cat> sortByNameAscending(ArrayList<Cat> cats){
+
+        Map<String, Cat> catsMap = new HashMap<>(); //Объявление коллекции Map
+        cats.forEach(e->catsMap.put(e.getName(), e)); //Передача всех котов из ArrayList в Map
+
+        //Проверка сколько котов поместилось в коллекцию
+        System.out.print("Котов в мапе: ");
+        System.out.println(catsMap.size());
+
+        
         return cats;
     }
 
