@@ -23,8 +23,14 @@ public class CatStatistics {
         System.out.println(catsMap.size());
         //System.out.println(catsMap.get("Пушок").getName());
 
+        //Вывод котов
+
         for(String key: catsMap.keySet()){
             System.out.println(key);
+            //System.out.println(catsMap.get(catsMap.get(key)));
+        }
+        for(Object entry: catsMap.entrySet()){
+            System.out.println(entry);
             //System.out.println(catsMap.get(catsMap.get(key)));
         }
 
