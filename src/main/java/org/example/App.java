@@ -17,6 +17,8 @@ package org.example;
 //          и отсортировав группировку по возрастанию.
 
 
+import java.util.ArrayList;
+
 public class App
 {
     public static void main( String[] args ) throws Exception {
@@ -45,18 +47,18 @@ public class App
         System.out.println("-------------------------------");
 
         //Создаем из котов ArrayList
-        
+        ArrayList<Cat> cats = new ArrayList<>();
+        cats.add(cat);
+        cats.add(cat1);
+        cats.add(cat2);
+        cats.add(kitty);
 
+        cats.forEach(e -> System.out.println(e.getName() + " весом " + e.getWeight() + "кг," + " злой? - " + e.isAngry()));
 
-
-
-
-
-
-
-
-
-
+        //Собираем статистику ...
+        CatStatistics catStatistics = new CatStatistics();
+        ArrayList <Cat> catByNameAscanding = new ArrayList<>(catStatistics.sortByNameAscending(cats));
+        catByNameAscanding.forEach(e-> System.out.println(e.getName()));
 
 
 
