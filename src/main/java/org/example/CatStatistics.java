@@ -15,7 +15,7 @@ public class CatStatistics {
 
     ArrayList<Cat> sortByNameAscending(ArrayList<Cat> cats){
 
-        Map<String, Cat> catsMap = new HashMap<>(); //Объявление коллекции Map
+        /*Map<String, Cat> catsMap = new HashMap<>(); //Объявление коллекции Map
         cats.forEach(e->catsMap.put(e.getName(), e)); //Передача всех котов из ArrayList в Map
 
         //Проверка сколько котов поместилось в коллекцию
@@ -32,7 +32,7 @@ public class CatStatistics {
         for(Object entry: catsMap.entrySet()){
             System.out.println(entry);
             //System.out.println(catsMap.get(catsMap.get(key)));
-        }
+        }*/
 
         //Перемешиваем Array
         Collections.shuffle(cats);
@@ -41,6 +41,8 @@ public class CatStatistics {
         Collections.reverse(cats);
         cats.forEach(cat -> System.out.println(cat.getName()));
         System.out.println("----------------------------------------------");
+        cats.sort();
+        cats.forEach(cat -> System.out.println(cat.getName()));
 
 
 
