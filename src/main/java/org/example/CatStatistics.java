@@ -41,8 +41,7 @@ public class CatStatistics {
         Collections.reverse(cats);
         cats.forEach(cat -> System.out.println(cat.getName()));
         System.out.println("----------------------------------------------");
-        cats.sort();
-        cats.forEach(cat -> System.out.println(cat.getName()));
+        
 
 
 
