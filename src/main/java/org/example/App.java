@@ -27,9 +27,9 @@ public class App
         System.out.println("-------------------------------");
 
         Cat kitty = new Cat("Пушок", 3,false);
-        System.out.print(!kitty.isAngry() ? "Добрый " : "Злой ");
+        /*System.out.print(!kitty.isAngry() ? "Добрый " : "Злой ");
         System.out.println(kitty.getName() + " весом " + kitty.getWeight() + " кило");
-        System.out.println("-------------------------------");
+        */System.out.println("-------------------------------");
 
         Cat cat = CatFactory.createCat("Рыжик", 88);
         /*System.out.print(!cat.isAngry() ? "Добрый " : "Злой ");
@@ -57,8 +57,12 @@ public class App
 
         //Собираем статистику ...
         CatStatistics catStatistics = new CatStatistics();
-        ArrayList <Cat> catByNameAscanding = new ArrayList<>(catStatistics.sortByNameAscending(cats));
+        //ArrayList <Cat> catByNameAscanding = new ArrayList<>(catStatistics.sortByNameAscending(cats));
         //catByNameAscanding.forEach(e-> System.out.println(e.getName()));
+
+        //Сортировка по убыванию веса
+        ArrayList <Cat> sortByWeightDescending = new ArrayList<>(catStatistics.sortByWeightDescending(cats));
+        sortByWeightDescending.forEach(e-> System.out.println(e.getWeight() + e.getName()));
 
 
 

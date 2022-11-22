@@ -41,10 +41,25 @@ public class CatStatistics {
         Collections.reverse(cats);
         cats.forEach(cat -> System.out.println(cat.getName()));
         System.out.println("----------------------------------------------");
-        
+        Collections.sort(cats, new Comparator<Cat>() {
+            @Override
+            public int compare(Cat o1, Cat o2) {
+                return o2.getWeight() - o1.getWeight();
+            }
+        });
+        cats.forEach(cat -> System.out.println(cat.getWeight() + cat.getName()));
 
 
+        return cats;
+    }
 
+    ArrayList<Cat> sortByWeightDescending(ArrayList<Cat> cats) {
+        Collections.sort(cats, new Comparator<Cat>() {
+            @Override
+            public int compare(Cat o1, Cat o2) {
+                return o2.getWeight() - o1.getWeight();
+            }
+        });
         return cats;
     }
 
