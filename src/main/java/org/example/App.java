@@ -39,9 +39,9 @@ public class App
         System.out.println("-------------------------------");
 
         StackKitchen<Cat> stackKitchen = new StackKitchen<>();
-        stackKitchen.add(cat);
-        stackKitchen.add(kitty);
-        stackKitchen.add(kitty);
+        stackKitchen.add(11);
+        stackKitchen.add(12);
+        stackKitchen.add(14);
         stackKitchen.add(doggy);
         stackKitchen.getAnimals();
 
