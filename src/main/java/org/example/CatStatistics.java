@@ -8,6 +8,7 @@ package org.example;
 //      int getCommonWeight(ArrayList<Cat> cats, boolean onlyAngry) — возвращает суммарный вес всех котов (если параметр onlyAngry равен true, то только сердитых котов).
 //      Map<String, List<Cat>> groupCatsByFirstLetter (ArrayList<Cat> cats) — возвращает список котов сгруппировав их по первой букве имени и отсортировав группировку по возрастанию.
 
+import java.lang.reflect.Array;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 
@@ -41,19 +42,23 @@ public class CatStatistics {
         Collections.reverse(cats);
         cats.forEach(cat -> System.out.println(cat.getName()));
         System.out.println("----------------------------------------------");
-        Collections.sort(cats, new Comparator<Cat>() {
+
+        Arrays.sort(cats, new Comparator<Cat>() {
+
             @Override
             public int compare(Cat o1, Cat o2) {
-                return o2.getWeight() - o1.getWeight();
+                return o1.getName().compareTo(o2.getName());
             }
         });
+
+
         cats.forEach(cat -> System.out.println(cat.getWeight() + cat.getName()));
 
 
         return cats;
     }
 
-    ArrayList<Cat> sortByWeightDescending(ArrayList<Cat> cats) {
+    public ArrayList<Cat> sortByWeightDescending (ArrayList<Cat> cats) {
         Collections.sort(cats, new Comparator<Cat>() {
             @Override
             public int compare(Cat o1, Cat o2) {
