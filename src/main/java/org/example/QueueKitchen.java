@@ -9,20 +9,33 @@ public class QueueKitchen<T> implements AnimalKitchen{
 
     @Override
     public void add(Object animal) {
-        animals.add( (T) animal);
+        Class animalClass;
+        if (animals.isEmpty()) {
+            animalClass = animal.getClass();
+        }
+        if(animal.getClass()==animalClass) {
+            animals.add((T) animal);
+            System.out.println("Голодный питомец ждёт своей очереди ...");
+        }else {
+            System.out.println("Они подеруться!");
+        }
     }
 
     @Override
     public void feed() {
-        animals.remove(0);
+        if (!animals.isEmpty()) {
+            animals.remove(0);
+            System.out.println("Сытый питомец удаляется с кухни ...");
+        } else {
+            System.out.println("Больше некого кормить. Все сыты.");
+        }
     }
 
     public void feedAll() {
-        animals.clear();
-    }
-
-    public ArrayList<T> getAnimals() {
-        return animals;
+        if (!animals.isEmpty()) {
+            animals.clear();
+            System.out.println("Больше некого кормить. Все сыты.");
+        }
     }
 
 }
