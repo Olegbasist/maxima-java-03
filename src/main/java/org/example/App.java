@@ -47,8 +47,8 @@ public class App
 
         //stackKitchen.feedAll();
         stackKitchenCatOrDog.feed();
+        stackKitchenCatOrDog.getAnimals();
         stackKitchenCatOrDog.feed();
-
         stackKitchenCatOrDog.getAnimals();
 
         /*QueueKitchen <Cat> queueKitchen = new QueueKitchen<>();

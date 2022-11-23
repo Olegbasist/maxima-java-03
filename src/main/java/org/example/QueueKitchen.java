@@ -4,12 +4,12 @@ import java.util.ArrayList;
 
 public class QueueKitchen<T> implements AnimalKitchen{
 
-
+    private Class animalClass = null;
     private ArrayList<T> animals = new ArrayList<>();
 
     @Override
     public void add(Object animal) {
-        Class animalClass;
+
         if (animals.isEmpty()) {
             animalClass = animal.getClass();
         }
