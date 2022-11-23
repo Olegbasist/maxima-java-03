@@ -38,7 +38,7 @@ public class App
 
         System.out.println("-------------------------------");
 
-        StackKitchen <Cat> stackKitchen = new StackKitchen<>();
+        StackKitchen<Cat> stackKitchen = new StackKitchen<>();
         stackKitchen.add(cat);
         stackKitchen.add(kitty);
         stackKitchen.add(kitty);
@@ -47,8 +47,8 @@ public class App
 
         //stackKitchen.feedAll();
         stackKitchen.feed();
+        stackKitchen.getAnimals();
         stackKitchen.feed();
-
         stackKitchen.getAnimals();
 
         /*QueueKitchen <Cat> queueKitchen = new QueueKitchen<>();
