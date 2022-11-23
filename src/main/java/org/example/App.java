@@ -38,18 +38,18 @@ public class App
 
         System.out.println("-------------------------------");
 
-        StackKitchen <Cat> stackKitchen = new StackKitchen<>();
-        stackKitchen.add(cat);
-        stackKitchen.add(kitty);
-        stackKitchen.add(kitty);
-        stackKitchen.add(doggy);
-        stackKitchen.getAnimals();
+        StackKitchenCatOrDog<Cat> stackKitchenCatOrDog = new StackKitchenCatOrDog<>();
+        stackKitchenCatOrDog.add(cat);
+        stackKitchenCatOrDog.add(kitty);
+        stackKitchenCatOrDog.add(kitty);
+        stackKitchenCatOrDog.add(doggy);
+        stackKitchenCatOrDog.getAnimals();
 
         //stackKitchen.feedAll();
-        stackKitchen.feed();
-        stackKitchen.feed();
+        stackKitchenCatOrDog.feed();
+        stackKitchenCatOrDog.feed();
 
-        stackKitchen.getAnimals();
+        stackKitchenCatOrDog.getAnimals();
 
         /*QueueKitchen <Cat> queueKitchen = new QueueKitchen<>();
         queueKitchen.add(11);
