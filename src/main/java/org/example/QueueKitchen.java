@@ -13,11 +13,8 @@ public class QueueKitchen<T> implements AnimalKitchen{
         if (animals.isEmpty()) {
             animalClass = animal.getClass();
         }
-        if(animal.getClass()==animalClass) {
+        if(animal.getClass().equals(animalClass)) {
             animals.add((T) animal);
-            System.out.println("Голодный питомец ждёт своей очереди ...");
-        }else {
-            System.out.println("Они подеруться!");
         }
     }
 
@@ -25,16 +22,12 @@ public class QueueKitchen<T> implements AnimalKitchen{
     public void feed() {
         if (!animals.isEmpty()) {
             animals.remove(0);
-            System.out.println("Сытый питомец удаляется с кухни ...");
-        } else {
-            System.out.println("Больше некого кормить. Все сыты.");
         }
     }
 
     public void feedAll() {
         if (!animals.isEmpty()) {
             animals.clear();
-            System.out.println("Больше некого кормить. Все сыты.");
         }
     }
 
