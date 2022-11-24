@@ -14,48 +14,57 @@ import java.util.*;
 
 public class CatStatistics {
 
-    ArrayList<Cat> sortByNameAscending(ArrayList<Cat> cats){
+    ArrayList<Cat> sortByNameAscending(ArrayList<Cat> cats) {
 
-        /*Map<String, Cat> catsMap = new HashMap<>(); //Объявление коллекции Map
-        cats.forEach(e->catsMap.put(e.getName(), e)); //Передача всех котов из ArrayList в Map
+        Map<String, Cat> catsMap = new HashMap<>(); //Объявление коллекции Map
+        cats.forEach(e -> catsMap.put(e.getName(), e)); //Передача всех котов из ArrayList в Map
 
         //Проверка сколько котов поместилось в коллекцию
         System.out.print("Котов в мапе: ");
         System.out.println(catsMap.size());
-        //System.out.println(catsMap.get("Пушок").getName());
+        //System.out.println(catsMap.get("Пушок").getName()); //Поиск конкретного кота по ключу
 
         //Вывод котов
 
-        for(String key: catsMap.keySet()){
+        for (String key : catsMap.keySet()) {
             System.out.println(key);
             //System.out.println(catsMap.get(catsMap.get(key)));
         }
-        for(Object entry: catsMap.entrySet()){
+        for (Object entry : catsMap.entrySet()) {
             System.out.println(entry);
             //System.out.println(catsMap.get(catsMap.get(key)));
-        }*/
+        }
 
-        //Перемешиваем Array
-        Collections.shuffle(cats);
-        cats.forEach(cat -> System.out.println(cat.getName()));
-        System.out.println("---------------------------------------------");
-        Collections.reverse(cats);
-        cats.forEach(cat -> System.out.println(cat.getName()));
-        System.out.println("----------------------------------------------");
+        System.out.println("===============================================================");
 
-        Arrays.sort(cats, new Comparator<Cat>() {
+
+
+
+
+
+            //Перемешиваем Array
+            /*Collections.shuffle(cats);
+            cats.forEach(cat -> System.out.println(cat.getName()));
+            System.out.println("---------------------------------------------");
+            Collections.reverse(cats);
+            cats.forEach(cat -> System.out.println(cat.getName()));
+            System.out.println("----------------------------------------------");*/
+
+            //Не работающий код:
+        /*Arrays.sort(cats, new Comparator<Cat>() {
 
             @Override
             public int compare(Cat o1, Cat o2) {
-                return o1.getName().compareTo(o2.getName());
+                return o1.toString().compareTo(o2.toString());
             }
-        });
+        });*/
 
 
-        cats.forEach(cat -> System.out.println(cat.getWeight() + cat.getName()));
+            //cats.forEach(cat -> System.out.println(cat.getWeight() + cat.getName()));
 
 
-        return cats;
+            return cats;
+
     }
 
     public ArrayList<Cat> sortByWeightDescending (ArrayList<Cat> cats) {
@@ -65,6 +74,7 @@ public class CatStatistics {
                 return o2.getWeight() - o1.getWeight();
             }
         });
+        cats.forEach(cat -> System.out.println(cat.getWeight() + cat.getName()));
         return cats;
     }
 
