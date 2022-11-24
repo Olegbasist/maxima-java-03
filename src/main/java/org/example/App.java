@@ -34,6 +34,8 @@ public class App
 
 
         Cat cat = CatFactory.createCat("Рыжик", 88);
+        Cat cat2 = CatFactory.createCat("Рыж", 4);
+        Cat cat3 = CatFactory.createCat("Снуффи", 6);
         //System.out.print(!cat.isAngry() ? "Добрый " : "Злой ");
         //System.out.println(cat.getName() + " весом " + cat.getWeight() + " кило");
 
@@ -46,37 +48,38 @@ public class App
         System.out.println("-------------------------------");
 
         StackKitchen<Cat> stackKitchen = new StackKitchen<>();
-        stackKitchen.add(11);
-        stackKitchen.add(12);
-        stackKitchen.add(14);
-        stackKitchen.add(doggy);
-        stackKitchen.getAnimals();
+        stackKitchen.add(cat);
+        stackKitchen.add(kitty);
+        stackKitchen.add(cat2);
+        //stackKitchen.getAnimals();
+        stackKitchen.add(cat3);
+        //stackKitchen.getAnimals();
 
         //stackKitchen.feedAll();
         stackKitchen.feed();
-        stackKitchen.getAnimals();
+        //stackKitchen.getAnimals();
         stackKitchen.feed();
-        stackKitchen.getAnimals();
+        //stackKitchen.getAnimals();
 
-        /*QueueKitchen <Cat> queueKitchen = new QueueKitchen<>();
-        queueKitchen.add(11);
+        System.out.println("//////////////////////////////////////////////////////");
+
+        QueueKitchen <Cat> queueKitchen = new QueueKitchen<>();
+
         queueKitchen.add(cat);
         queueKitchen.add(kitty);
-        queueKitchen.feed();
-        queueKitchen.add(cat);
-        queueKitchen.getAnimals();
-        //queueKitchen.add(cat);
-        queueKitchen.add(doggy);
-        //queueKitchen.add(11);
+        //queueKitchen.feed();
+        queueKitchen.add(cat2);
+        //queueKitchen.getAnimals();
+        queueKitchen.add(cat3);
 
-        //System.out.println(queueKitchen.getAnimals());
+        //queueKitchen.getAnimals();
 
         queueKitchen.feed();
-        //System.out.println(queueKitchen.getAnimals());
+        //queueKitchen.getAnimals();
         queueKitchen.feed();
-        //System.out.println(queueKitchen.getAnimals());
+        //queueKitchen.getAnimals();
         queueKitchen.feed();
-       // System.out.println(queueKitchen.getAnimals());*/
+        //queueKitchen.getAnimals();
 
         
     }
