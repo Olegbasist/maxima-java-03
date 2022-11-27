@@ -55,7 +55,27 @@ public class App
 
         System.out.println("//////////////////////////////////////////////////////");
 
-       /* QueueKitchen27 <Cat> queueKitchen = new QueueKitchen27<>();
+        QueueKitchen27 <Cat> queueKitchen = new QueueKitchen27<>();
+
+        queueKitchen.add(cat);
+        queueKitchen.add(kitty);
+        //queueKitchen.feed();
+        queueKitchen.add(cat2);
+        //queueKitchen.getAnimals();
+        queueKitchen.add(cat3);
+
+        //queueKitchen.getAnimals();
+
+        queueKitchen.feed();
+        //queueKitchen.getAnimals();
+        queueKitchen.feed();
+        //queueKitchen.getAnimals();
+        queueKitchen.feed();
+        //queueKitchen.getAnimals();
+
+        System.out.println("//////////////////////////////////////////////////////");
+
+        /*StackKitchen27 <Cat> queueKitchen = new StackKitchen27<>();
 
         queueKitchen.add(cat);
         queueKitchen.add(kitty);
@@ -72,26 +92,6 @@ public class App
         //queueKitchen.getAnimals();
         queueKitchen.feed();
         //queueKitchen.getAnimals();*/
-
-        System.out.println("//////////////////////////////////////////////////////");
-
-        StackKitchen27 <Cat> queueKitchen = new StackKitchen27<>();
-
-        queueKitchen.add(cat);
-        queueKitchen.add(kitty);
-        //queueKitchen.feed();
-        queueKitchen.add(cat2);
-        //queueKitchen.getAnimals();
-        queueKitchen.add(cat3);
-
-        //queueKitchen.getAnimals();
-
-        queueKitchen.feed();
-        //queueKitchen.getAnimals();
-        queueKitchen.feed();
-        //queueKitchen.getAnimals();
-        queueKitchen.feed();
-        //queueKitchen.getAnimals();
 
         
     }
