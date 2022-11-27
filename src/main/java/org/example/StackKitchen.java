@@ -1,21 +1,14 @@
 package org.example;
 
-import java.util.ArrayList;
 
-public class StackKitchen<T> implements AnimalKitchen<T>{
-
-    private ArrayList<T> animals = new ArrayList<>();
-
-    @Override
-    public void add(T animal) {
-            animals.add((T) animal);
-    }
+public class StackKitchen<T> extends Kitchen<T> implements AnimalKitchen<T>{
 
     @Override
     public void feed() {
+
         if (!animals.isEmpty()) {
             animals.remove(animals.size()-1);
+
         }
     }
-
 }
