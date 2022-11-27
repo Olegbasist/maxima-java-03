@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.ArrayList;
 
-public abstract class Kitchen <T> implements AnimalKitchen<T>{
+public abstract class SuperKitchen<T> implements AnimalKitchen<T>{
 
     public ArrayList<T> animals = new ArrayList<>();
 
