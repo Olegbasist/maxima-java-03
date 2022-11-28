@@ -57,8 +57,8 @@ public class App
 
         //Собираем статистику ...
         CatStatistics catStatistics = new CatStatistics();
-        //ArrayList <Cat> catByNameAscanding = new ArrayList<>(catStatistics.sortByNameAscending(cats));
-        //catByNameAscanding.forEach(e-> System.out.println(e.getName()));
+        //ArrayList <Cat> catByNameAscending = new ArrayList<>(catStatistics.sortByNameAscending(cats));
+        //catByNameAscending.forEach(e-> System.out.println(e.getName()));
 
         //Сортировка по убыванию веса
         //ArrayList <Cat> sortByWeightDescending = new ArrayList<>(catStatistics.sortByWeightDescending(cats));
