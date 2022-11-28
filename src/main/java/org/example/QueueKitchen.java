@@ -1,7 +1,7 @@
 package org.example;
 
 
-public class QueueKitchen<T> extends SuperKitchen<T> implements AnimalKitchen<T>{
+public class QueueKitchen<T> extends SuperKitchen<T> {
 
     @Override
     public void feed() {
