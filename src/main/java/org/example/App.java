@@ -1,6 +1,6 @@
 package org.example;
 
-//  03.11.2022 Описать класс Dog с методами аналогичными классу Cat, но не имеющего с ним общих предков.
+//  03.11.2022 Описать класс Dog с методами, аналогичными классу Cat, но не имеющего с ним общих предков.
 //
 //  03.11.2022 Описать интерфейс AnimalKitchen — описывает кормление группы любых животных.
 //  Методы:
@@ -9,14 +9,6 @@ package org.example;
 //
 //  03.11.2022 Описать два класса QueueKitchen и StackKitchen,
 //  реализующие кормление животных по принципам FIFO и LIFO соответственно. (Подсказка: это конвейер)
-
-// TODO: 24.11.2022 Комментарий преподавателя:
-//  И все равно используете Object и проверку на класс.
-//  Ставите Т - и эту проверку сделает компилятор. animalClass - не нужно здесь.
-//  Метод feed работает одинаково для очереди и стека - так быть не должно.
-//  getAnimals - не описано,
-//  в коде везде ссылка на свойство напрямую.
-//  И когда все поправите - проанализируйте решение на дублирование кода
 
 public class App
 {
@@ -34,6 +26,8 @@ public class App
 
 
         Cat cat = CatFactory.createCat("Рыжик", 88);
+        Cat cat2 = CatFactory.createCat("Рыж", 4);
+        Cat cat3 = CatFactory.createCat("Снуффи", 6);
         //System.out.print(!cat.isAngry() ? "Добрый " : "Злой ");
         //System.out.println(cat.getName() + " весом " + cat.getWeight() + " кило");
 
@@ -45,38 +39,41 @@ public class App
 
         System.out.println("-------------------------------");
 
-        StackKitchen<Cat> stackKitchen = new StackKitchen<>();
+        /*StackKitchen<Cat> stackKitchen = new StackKitchen<>();
         stackKitchen.add(cat);
         stackKitchen.add(kitty);
-        stackKitchen.add(kitty);
-        stackKitchen.add(doggy);
-        stackKitchen.getAnimals();
+        stackKitchen.add(cat2);
+        //stackKitchen.getAnimals();
+        stackKitchen.add(cat3);
+        //stackKitchen.getAnimals();
 
         //stackKitchen.feedAll();
         stackKitchen.feed();
-        stackKitchen.getAnimals();
+        //stackKitchen.getAnimals();
         stackKitchen.feed();
-        stackKitchen.getAnimals();
+        //stackKitchen.getAnimals();*/
 
-        /*QueueKitchen <Cat> queueKitchen = new QueueKitchen<>();
-        queueKitchen.add(11);
+        System.out.println("//////////////////////////////////////////////////////");
+
+        QueueKitchen<Cat> queueKitchen = new QueueKitchen<>();
+
         queueKitchen.add(cat);
         queueKitchen.add(kitty);
-        queueKitchen.feed();
-        queueKitchen.add(cat);
-        queueKitchen.getAnimals();
-        //queueKitchen.add(cat);
-        queueKitchen.add(doggy);
-        //queueKitchen.add(11);
+        //queueKitchen.feed();
+        queueKitchen.add(cat2);
+        //queueKitchen.getAnimals();
+        queueKitchen.add(cat3);
 
-        //System.out.println(queueKitchen.getAnimals());
+        //queueKitchen.getAnimals();
 
         queueKitchen.feed();
-        //System.out.println(queueKitchen.getAnimals());
+        //queueKitchen.getAnimals();
         queueKitchen.feed();
-        //System.out.println(queueKitchen.getAnimals());
+        //queueKitchen.getAnimals();
         queueKitchen.feed();
-       // System.out.println(queueKitchen.getAnimals());*/
+        //queueKitchen.getAnimals();
+
+        System.out.println("//////////////////////////////////////////////////////");
 
         
     }
