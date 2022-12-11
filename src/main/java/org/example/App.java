@@ -1,7 +1,7 @@
 package org.example;
 
 //  07.10.2022 Описать класс CatStatistics со статическими методами:
-//      TODO: 07.10.2022 ArrayList<Cat> sortByNameAscending(ArrayList<Cat> cats)
+//      07.10.2022 ArrayList<Cat> sortByNameAscending(ArrayList<Cat> cats)
 //          — возвращает список котов, отсортировав по имени по возрастанию.
 //      07.10.2022 ArrayList<Cat> sortByWeightDescending(ArrayList<Cat> cats)
 //          — возвращает список котов, отсортировав по убыванию веса.
@@ -66,9 +66,8 @@ public class App
         //sortByWeightDescending.forEach(e-> System.out.println(e.getWeight() + e.getName()));
 
         //Сортировка по имени
-        //ArrayList<Cat> catByNameAscending = new ArrayList<>(catStatistics.sortByNameAscending(cats));
+        ArrayList<Cat> catByNameAscending = new ArrayList<>(catStatistics.sortByNameAscending(cats));
         //ArrayList<Cat> catByWeightDescending = new ArrayList<>(catStatistics.sortByWeightDescending(cats));
-        ArrayList<Cat> catByNameDescending = new ArrayList<>(catStatistics.sortByNameDescending (cats));
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////

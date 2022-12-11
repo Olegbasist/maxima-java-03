@@ -27,7 +27,7 @@ public class CatStatistics {
                 + (cat.isAngry() ? " ... злой" : " ... добрый")));
     }
 
-    ArrayList<Cat> sortByNameAscending(ArrayList<Cat> cats) {
+    ArrayList<Cat> sortByName(ArrayList<Cat> cats) {
 
         Map<String, Cat> catsMap = new HashMap<>(); //Объявление коллекции Map
         cats.forEach(e -> catsMap.put(e.getName(), e)); //Передача всех котов из ArrayList в Map
@@ -100,14 +100,13 @@ public class CatStatistics {
         catsToString(cats);
         return cats;
     }
-    ArrayList<Cat> sortByNameDescending (ArrayList<Cat> cats) {
+    ArrayList<Cat> sortByNameAscending (ArrayList<Cat> cats) {
         System.out.println("Несортированные коты: ");
         catsToString(cats);
 
-        Collections.sort(cats, ((o1, o2) -> o1.getName().compareTo(o2.getName())));
+        //cats.sort(((o1, o2) -> o1.getName().compareTo(o2.getName())));
+        cats.sort((Comparator.comparing(Cat::getName)));
         //Collections.sort(cats, (Comparator.comparing(Cat::getName)));
-
-
 
 
         System.out.println("Сортированные коты: ");
