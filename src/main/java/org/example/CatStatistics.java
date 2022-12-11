@@ -19,7 +19,7 @@ public class CatStatistics {
 
     public void catsToString (ArrayList<Cat> cats){
         cats.forEach(cat -> System.out.println((cats.lastIndexOf(cat)+1)
-                + " "
+                + ". "
                 + cat.getName()
                 + " весом "
                 + cat.getWeight()
@@ -94,14 +94,23 @@ public class CatStatistics {
     public ArrayList<Cat> sortByWeightDescending (ArrayList<Cat> cats) {
         System.out.println("Несортированные коты: ");
         catsToString(cats);
-        Collections.sort(cats, new Comparator<Cat>() {
-            @Override
-            public int compare(Cat o1, Cat o2) {
-                return o2.getWeight() - o1.getWeight();
-            }
-        });
+        Collections.sort(cats, (o1, o2) -> o2.getWeight() - o1.getWeight());
         System.out.println("Сортированные коты:");
         //cats.forEach(cat -> System.out.println(cat.getWeight() + cat.getName()));
+        catsToString(cats);
+        return cats;
+    }
+    ArrayList<Cat> sortByNameDescending (ArrayList<Cat> cats) {
+        System.out.println("Несортированные коты: ");
+        catsToString(cats);
+
+        Collections.sort(cats, ((o1, o2) -> o1.getName().compareTo(o2.getName())));
+        //Collections.sort(cats, (Comparator.comparing(Cat::getName)));
+
+
+
+
+        System.out.println("Сортированные коты: ");
         catsToString(cats);
         return cats;
     }

@@ -24,27 +24,28 @@ public class App
     public static void main( String[] args ) throws Exception {
 
         //Задаем котов по-одному ...
-        System.out.println("-------------------------------");
+        //System.out.println("-------------------------------");
 
         Cat kitty = new Cat("Пушок", 3,false);
         /*System.out.print(!kitty.isAngry() ? "Добрый " : "Злой ");
         System.out.println(kitty.getName() + " весом " + kitty.getWeight() + " кило");
-        */System.out.println("-------------------------------");
+        */
+        //System.out.println("-------------------------------");
 
         Cat cat = CatFactory.createCat("Рыжик", 88);
         /*System.out.print(!cat.isAngry() ? "Добрый " : "Злой ");
         System.out.println(cat.getName() + " весом " + cat.getWeight() + " кило");*/
-        System.out.println("-------------------------------");
+        //System.out.println("-------------------------------");
 
         Cat cat1 = new Cat("Маркиз", 8, false);
         /*System.out.print(!cat1.isAngry() ? "Добрый " : "Злой ");
         System.out.println(cat1.getName() + " весом " + cat1.getWeight() + " кило");*/
-        System.out.println("-------------------------------");
+        //System.out.println("-------------------------------");
 
         Cat cat2 = new Cat("Васька", 4, true);
         /*System.out.print(!cat2.isAngry() ? "Добрый " : "Злой ");
         System.out.println(cat2.getName() + " весом " + cat2.getWeight() + " кило");*/
-        System.out.println("-------------------------------");
+        //System.out.println("-------------------------------");
 
         //Создаем из котов ArrayList
         ArrayList<Cat> cats = new ArrayList<>();
@@ -66,7 +67,9 @@ public class App
 
         //Сортировка по имени
         //ArrayList<Cat> catByNameAscending = new ArrayList<>(catStatistics.sortByNameAscending(cats));
-        ArrayList<Cat> catByWeightDescending = new ArrayList<>(catStatistics.sortByWeightDescending(cats));
+        //ArrayList<Cat> catByWeightDescending = new ArrayList<>(catStatistics.sortByWeightDescending(cats));
+        ArrayList<Cat> catByNameDescending = new ArrayList<>(catStatistics.sortByNameDescending (cats));
+
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
