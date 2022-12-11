@@ -116,6 +116,12 @@ public class CatStatistics {
         return cats;
     }
 
+    public Cat findFirstNonAngryCat (ArrayList<Cat> cats) {
+        Cat cat;
+
+        return null;
+    }
+
 
 
 }

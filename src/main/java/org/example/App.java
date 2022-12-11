@@ -62,9 +62,10 @@ public class App
         System.out.println("Несортированные коты: ");
         catStatistics.catsToString(cats);
 
-        catStatistics.sortByNameAscending(cats);
+        //catStatistics.sortByNameAscending(cats);
         //catStatistics.sortByWeightDescending(cats);
         //catStatistics.removeFirstAndLast(cats);
+        catStatistics.findFirstNonAngryCat(cats);
 
         System.out.println();
         System.out.println("Сортированные коты: ");
