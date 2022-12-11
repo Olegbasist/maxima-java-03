@@ -11,13 +11,37 @@ package org.example;
 import java.lang.reflect.Array;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
+import java.util.function.Supplier;
 
 public class CatStatistics {
+
+    public void catsToString (ArrayList<Cat> cats){
+        cats.forEach(cat -> System.out.println((cats.lastIndexOf(cat)+1)
+                + " "
+                + cat.getName()
+                + " весом "
+                + cat.getWeight()
+                + "Кг."
+                + (cat.isAngry() ? " ... злой" : " ... добрый")));
+    }
 
     ArrayList<Cat> sortByNameAscending(ArrayList<Cat> cats) {
 
         Map<String, Cat> catsMap = new HashMap<>(); //Объявление коллекции Map
         cats.forEach(e -> catsMap.put(e.getName(), e)); //Передача всех котов из ArrayList в Map
+        catsToString(cats);
+
+        System.out.println("///////////////////////////////////////");
+
+        Supplier<Cat> catRandomizer =() -> {
+            int value = (int) (Math.random() * cats.size());
+            return cats.get(value);
+        };
+        System.out.println(catRandomizer.get().getName());
+        System.out.println("///////////////////////////////////////");
+        //cats.forEach(cat -> System.out.println(cat.getName()));
 
         //Проверка сколько котов поместилось в коллекцию
         System.out.print("Котов в мапе: ");
@@ -66,17 +90,22 @@ public class CatStatistics {
             return cats;
 
     }
-
+    //Сортируем с помощью компаратора ... ???
     public ArrayList<Cat> sortByWeightDescending (ArrayList<Cat> cats) {
+        System.out.println("Несортированные коты: ");
+        catsToString(cats);
         Collections.sort(cats, new Comparator<Cat>() {
             @Override
             public int compare(Cat o1, Cat o2) {
                 return o2.getWeight() - o1.getWeight();
             }
         });
-        cats.forEach(cat -> System.out.println(cat.getWeight() + cat.getName()));
+        System.out.println("Сортированные коты:");
+        //cats.forEach(cat -> System.out.println(cat.getWeight() + cat.getName()));
+        catsToString(cats);
         return cats;
     }
+
 
 
 }

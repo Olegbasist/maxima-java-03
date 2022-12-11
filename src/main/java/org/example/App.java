@@ -65,8 +65,8 @@ public class App
         //sortByWeightDescending.forEach(e-> System.out.println(e.getWeight() + e.getName()));
 
         //Сортировка по имени
-        ArrayList<Cat> catByNameAscending = new ArrayList<>(catStatistics.sortByNameAscending(cats));
-
+        //ArrayList<Cat> catByNameAscending = new ArrayList<>(catStatistics.sortByNameAscending(cats));
+        ArrayList<Cat> catByWeightDescending = new ArrayList<>(catStatistics.sortByWeightDescending(cats));
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
