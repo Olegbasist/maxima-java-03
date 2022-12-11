@@ -63,10 +63,6 @@ public class CatStatistics {
         System.out.println("===============================================================");
 
 
-
-
-
-
             //Перемешиваем Array
             /*Collections.shuffle(cats);
             cats.forEach(cat -> System.out.println(cat.getName()));
@@ -91,39 +87,32 @@ public class CatStatistics {
             return cats;
 
     }
-    //Сортируем с помощью компаратора ... ???
-    public ArrayList<Cat> sortByWeightDescending (ArrayList<Cat> cats) {
-        System.out.println("Несортированные коты: ");
-        catsToString(cats);
 
-        Collections.sort(cats, (o1, o2) -> o2.getWeight() - o1.getWeight());
+    //Сортируем с помощью компаратора ...
 
-        System.out.println("Сортированные коты:");
-        catsToString(cats);
-        return cats;
-    }
     public ArrayList<Cat> sortByNameAscending (ArrayList<Cat> cats) {
-        System.out.println("Несортированные коты: ");
-        catsToString(cats);
 
         //cats.sort(((o1, o2) -> o1.getName().compareTo(o2.getName())));
         cats.sort((Comparator.comparing(Cat::getName)));
         //Collections.sort(cats, (Comparator.comparing(Cat::getName)));
 
-        System.out.println("Сортированные коты: ");
-        catsToString(cats);
         return cats;
     }
 
+    public ArrayList<Cat> sortByWeightDescending (ArrayList<Cat> cats) {
+
+        //Collections.sort(cats, (o1, o2) -> o2.getWeight() - o1.getWeight());
+        cats.sort((o1, o2) -> o2.getWeight() - o1.getWeight());
+
+        return cats;
+    }
+
+    //Простое удаление первого и последнего котов
     public ArrayList<Cat> removeFirstAndLast (ArrayList<Cat> cats) {
-        System.out.println("Несортированные коты: ");
-        catsToString(cats);
 
         cats.remove(cats.size()-1);
         cats.remove(0);
 
-        System.out.println("Сортированные коты: ");
-        catsToString(cats);
         return cats;
     }
 

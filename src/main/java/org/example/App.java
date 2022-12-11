@@ -58,48 +58,20 @@ public class App
 
 
         //Сортировки
+        System.out.println();
+        System.out.println("Несортированные коты: ");
+        catStatistics.catsToString(cats);
 
-        //catStatistics.sortByNameAscending(cats);
+        catStatistics.sortByNameAscending(cats);
         //catStatistics.sortByWeightDescending(cats);
-        catStatistics.removeFirstAndLast(cats);
+        //catStatistics.removeFirstAndLast(cats);
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////
+        System.out.println();
+        System.out.println("Сортированные коты: ");
+        catStatistics.catsToString(cats);
 
-        /*StackKitchen <Cat> stackKitchen = new StackKitchen<>();
-        stackKitchen.add(cat);
-        stackKitchen.add(kitty);
-        stackKitchen.add(kitty);
-        stackKitchen.add(doggy);
-        stackKitchen.getAnimals();
 
-        //stackKitchen.feedAll();
-        stackKitchen.feed();
-        stackKitchen.feed();
-
-        stackKitchen.getAnimals();*/
-
-        /*QueueKitchen <Cat> queueKitchen = new QueueKitchen<>();
-        queueKitchen.add(11);
-        queueKitchen.add(cat);
-        queueKitchen.add(kitty);
-        queueKitchen.feed();
-        queueKitchen.add(cat);
-        queueKitchen.getAnimals();
-        //queueKitchen.add(cat);
-        queueKitchen.add(doggy);
-        //queueKitchen.add(11);
-
-        //System.out.println(queueKitchen.getAnimals());
-
-        queueKitchen.feed();
-        //System.out.println(queueKitchen.getAnimals());
-        queueKitchen.feed();
-        //System.out.println(queueKitchen.getAnimals());
-        queueKitchen.feed();
-       // System.out.println(queueKitchen.getAnimals());*/
-
-        
-    }
+}
 
 
 }
