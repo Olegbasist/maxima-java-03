@@ -17,6 +17,7 @@ import java.util.function.Supplier;
 
 public class CatStatistics {
 
+
     public void catsToString (ArrayList<Cat> cats){
         cats.forEach(cat -> System.out.println((cats.lastIndexOf(cat)+1)
                 + ". "
@@ -94,13 +95,14 @@ public class CatStatistics {
     public ArrayList<Cat> sortByWeightDescending (ArrayList<Cat> cats) {
         System.out.println("Несортированные коты: ");
         catsToString(cats);
+
         Collections.sort(cats, (o1, o2) -> o2.getWeight() - o1.getWeight());
+
         System.out.println("Сортированные коты:");
-        //cats.forEach(cat -> System.out.println(cat.getWeight() + cat.getName()));
         catsToString(cats);
         return cats;
     }
-    ArrayList<Cat> sortByNameAscending (ArrayList<Cat> cats) {
+    public ArrayList<Cat> sortByNameAscending (ArrayList<Cat> cats) {
         System.out.println("Несортированные коты: ");
         catsToString(cats);
 
@@ -108,6 +110,17 @@ public class CatStatistics {
         cats.sort((Comparator.comparing(Cat::getName)));
         //Collections.sort(cats, (Comparator.comparing(Cat::getName)));
 
+        System.out.println("Сортированные коты: ");
+        catsToString(cats);
+        return cats;
+    }
+
+    public ArrayList<Cat> removeFirstAndLast (ArrayList<Cat> cats) {
+        System.out.println("Несортированные коты: ");
+        catsToString(cats);
+
+        cats.remove(cats.size()-1);
+        cats.remove(0);
 
         System.out.println("Сортированные коты: ");
         catsToString(cats);

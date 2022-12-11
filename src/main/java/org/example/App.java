@@ -5,7 +5,7 @@ package org.example;
 //          — возвращает список котов, отсортировав по имени по возрастанию.
 //      07.10.2022 ArrayList<Cat> sortByWeightDescending(ArrayList<Cat> cats)
 //          — возвращает список котов, отсортировав по убыванию веса.
-//      TODO: 07.10.2022 ArrayList<Cat> removeFirstAndLast (ArrayList<Cat> cats)
+//      07.10.2022 ArrayList<Cat> removeFirstAndLast (ArrayList<Cat> cats)
 //          — возвращает список котов кроме первого и последнего.
 //      TODO: 07.10.2022 Cat findFirstNonAngryCat (ArrayList<Cat> cats)
 //          — возвращает первого не-сердитого кота в списке.
@@ -54,21 +54,14 @@ public class App
         cats.add(cat2);
         cats.add(kitty);
 
-        //cats.forEach(e -> System.out.println(e.getName() + " весом " + e.getWeight() + "кг," + " злой? - " + e.isAngry()));
-
-        //Собираем статистику ...
         CatStatistics catStatistics = new CatStatistics();
-        //ArrayList <Cat> catByNameAscending = new ArrayList<>(catStatistics.sortByNameAscending(cats));
-        //catByNameAscending.forEach(e-> System.out.println(e.getName()));
 
-        //Сортировка по убыванию веса
-        //ArrayList <Cat> sortByWeightDescending = new ArrayList<>(catStatistics.sortByWeightDescending(cats));
-        //sortByWeightDescending.forEach(e-> System.out.println(e.getWeight() + e.getName()));
 
-        //Сортировка по имени
-        ArrayList<Cat> catByNameAscending = new ArrayList<>(catStatistics.sortByNameAscending(cats));
-        //ArrayList<Cat> catByWeightDescending = new ArrayList<>(catStatistics.sortByWeightDescending(cats));
+        //Сортировки
 
+        //catStatistics.sortByNameAscending(cats);
+        //catStatistics.sortByWeightDescending(cats);
+        catStatistics.removeFirstAndLast(cats);
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
