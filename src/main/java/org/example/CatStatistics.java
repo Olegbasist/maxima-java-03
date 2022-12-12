@@ -19,6 +19,7 @@ public class CatStatistics {
 
 
     public void catsToString (ArrayList<Cat> cats){
+        //cats.forEach(cat -> System.out.println(cat.toString()));
         cats.forEach(cat -> System.out.println((cats.lastIndexOf(cat)+1)
                 + ". "
                 + cat.getName()
@@ -110,6 +111,7 @@ public class CatStatistics {
     //Простое удаление первого и последнего котов
     public ArrayList<Cat> removeFirstAndLast (ArrayList<Cat> cats) {
 
+        cats.trimToSize();
         cats.remove(cats.size()-1);
         cats.remove(0);
 
@@ -117,9 +119,27 @@ public class CatStatistics {
     }
 
     public Cat findFirstNonAngryCat (ArrayList<Cat> cats) {
-        Cat cat;
 
-        return null;
+// Можно просто циклом перебрать котов до первого "не сердитого" ...
+        Cat cat = null;
+
+        /*for (int i = 0; i <cats.size() ; i++) {
+            if (!cats.get(i).isAngry()){
+                cat = cats.get(i);
+                break;
+
+            }
+        }*/
+
+        for (Cat value : cats) {
+            if (!value.isAngry()) {
+                cat = value;
+                break;
+
+            }
+        }
+
+        return cat;
     }
 
 

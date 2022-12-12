@@ -45,4 +45,12 @@ public class Cat {
         this.isAngry = isAngry;
     }
 
+    @Override
+    public String toString() {
+        return "Cat{" +
+                "name='" + name + '\'' +
+                ", weight=" + weight +
+                ", isAngry=" + isAngry +
+                '}';
+    }
 }

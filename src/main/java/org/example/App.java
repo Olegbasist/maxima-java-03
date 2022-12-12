@@ -7,7 +7,7 @@ package org.example;
 //          — возвращает список котов, отсортировав по убыванию веса.
 //      07.10.2022 ArrayList<Cat> removeFirstAndLast (ArrayList<Cat> cats)
 //          — возвращает список котов кроме первого и последнего.
-//      TODO: 07.10.2022 Cat findFirstNonAngryCat (ArrayList<Cat> cats)
+//      07.10.2022 Cat findFirstNonAngryCat (ArrayList<Cat> cats)
 //          — возвращает первого не-сердитого кота в списке.
 //      TODO: 07.10.2022 int getCommonWeight(ArrayList<Cat> cats, boolean onlyAngry)
 //          — возвращает суммарный вес всех котов
@@ -65,11 +65,13 @@ public class App
         //catStatistics.sortByNameAscending(cats);
         //catStatistics.sortByWeightDescending(cats);
         //catStatistics.removeFirstAndLast(cats);
-        catStatistics.findFirstNonAngryCat(cats);
+        //catStatistics.findFirstNonAngryCat(cats);
 
         System.out.println();
         System.out.println("Сортированные коты: ");
         catStatistics.catsToString(cats);
+
+        System.out.println(catStatistics.findFirstNonAngryCat(cats));
 
 
 }
