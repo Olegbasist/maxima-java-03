@@ -157,15 +157,13 @@ public class CatStatistics {
             }
         }
 
-
-
             return summaryWeight;
     }
 
     public Map<String, List<Cat>> groupCatsByFirstLetter (ArrayList<Cat> cats) {
 
         Map<String, List<Cat>> catsMap = new HashMap<>(); //Объявление коллекции Map
-        
+
 
         return catsMap;
     }

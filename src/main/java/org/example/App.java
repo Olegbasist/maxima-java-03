@@ -9,7 +9,7 @@ package org.example;
 //          — возвращает список котов кроме первого и последнего.
 //      07.10.2022 Cat findFirstNonAngryCat (ArrayList<Cat> cats)
 //          — возвращает первого не-сердитого кота в списке.
-//      TODO: 07.10.2022 int getCommonWeight(ArrayList<Cat> cats, boolean onlyAngry)
+//       07.10.2022 int getCommonWeight(ArrayList<Cat> cats, boolean onlyAngry)
 //          — возвращает суммарный вес всех котов
 //          (если параметр onlyAngry равен true, то только сердитых котов).
 //      TODO: 07.10.2022 Map<String, List<Cat>> groupCatsByFirstLetter (ArrayList<Cat> cats)
