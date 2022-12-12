@@ -18,9 +18,9 @@ import java.util.function.Supplier;
 public class CatStatistics {
 
 
-    public void catsToString (ArrayList<Cat> cats){
+    public void catsToString(ArrayList<Cat> cats) {
         //cats.forEach(cat -> System.out.println(cat.toString()));
-        cats.forEach(cat -> System.out.println((cats.lastIndexOf(cat)+1)
+        cats.forEach(cat -> System.out.println((cats.lastIndexOf(cat) + 1)
                 + ". "
                 + cat.getName()
                 + " весом "
@@ -37,7 +37,7 @@ public class CatStatistics {
 
         System.out.println("///////////////////////////////////////");
 
-        Supplier<Cat> catRandomizer =() -> {
+        Supplier<Cat> catRandomizer = () -> {
             int value = (int) (Math.random() * cats.size());
             return cats.get(value);
         };
@@ -64,7 +64,7 @@ public class CatStatistics {
         System.out.println("===============================================================");
 
 
-            //Перемешиваем Array
+        //Перемешиваем Array
             /*Collections.shuffle(cats);
             cats.forEach(cat -> System.out.println(cat.getName()));
             System.out.println("---------------------------------------------");
@@ -72,7 +72,7 @@ public class CatStatistics {
             cats.forEach(cat -> System.out.println(cat.getName()));
             System.out.println("----------------------------------------------");*/
 
-            //Не работающий код:
+        //Не работающий код:
         /*Arrays.sort(cats, new Comparator<Cat>() {
 
             @Override
@@ -82,16 +82,16 @@ public class CatStatistics {
         });*/
 
 
-            //cats.forEach(cat -> System.out.println(cat.getWeight() + cat.getName()));
+        //cats.forEach(cat -> System.out.println(cat.getWeight() + cat.getName()));
 
 
-            return cats;
+        return cats;
 
     }
 
     //Сортируем с помощью компаратора ...
 
-    public ArrayList<Cat> sortByNameAscending (ArrayList<Cat> cats) {
+    public ArrayList<Cat> sortByNameAscending(ArrayList<Cat> cats) {
 
         //cats.sort(((o1, o2) -> o1.getName().compareTo(o2.getName())));
         cats.sort((Comparator.comparing(Cat::getName)));
@@ -100,7 +100,7 @@ public class CatStatistics {
         return cats;
     }
 
-    public ArrayList<Cat> sortByWeightDescending (ArrayList<Cat> cats) {
+    public ArrayList<Cat> sortByWeightDescending(ArrayList<Cat> cats) {
 
         //Collections.sort(cats, (o1, o2) -> o2.getWeight() - o1.getWeight());
         cats.sort((o1, o2) -> o2.getWeight() - o1.getWeight());
@@ -109,16 +109,16 @@ public class CatStatistics {
     }
 
     //Простое удаление первого и последнего котов
-    public ArrayList<Cat> removeFirstAndLast (ArrayList<Cat> cats) {
+    public ArrayList<Cat> removeFirstAndLast(ArrayList<Cat> cats) {
 
         cats.trimToSize();
-        cats.remove(cats.size()-1);
+        cats.remove(cats.size() - 1);
         cats.remove(0);
 
         return cats;
     }
 
-    public Cat findFirstNonAngryCat (ArrayList<Cat> cats) {
+    public Cat findFirstNonAngryCat(ArrayList<Cat> cats) {
 
 // Можно просто циклом перебрать котов до первого "не сердитого" ...
         Cat cat = null;
@@ -142,6 +142,30 @@ public class CatStatistics {
         return cat;
     }
 
+    public int getCommonWeight(ArrayList<Cat> cats, boolean onlyAngry) {
+        int summaryWeight = 0;
 
+        if (onlyAngry) {
+            for (Cat cat : cats) {
+                if (cat.isAngry()) {
+                    summaryWeight += cat.getWeight();
+                }
+            }
+        } else {
+            for (Cat cat : cats) {
+                summaryWeight += cat.getWeight();
+            }
+        }
+
+
+
+            return summaryWeight;
+    }
+
+    /*public Map<String, List<Cat>> groupCatsByFirstLetter (ArrayList<Cat> cats) {
+        Map<>
+
+        return
+    }*/
 
 }

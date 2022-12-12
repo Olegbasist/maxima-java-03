@@ -66,12 +66,12 @@ public class App
         //catStatistics.sortByWeightDescending(cats);
         //catStatistics.removeFirstAndLast(cats);
         //catStatistics.findFirstNonAngryCat(cats);
+        System.out.println(catStatistics.getCommonWeight(cats, true));
 
         System.out.println();
         System.out.println("Сортированные коты: ");
         catStatistics.catsToString(cats);
 
-        System.out.println(catStatistics.findFirstNonAngryCat(cats));
 
 
 }
