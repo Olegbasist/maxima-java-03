@@ -67,7 +67,8 @@ public class App
         //catStatistics.removeFirstAndLast(cats);
         //catStatistics.findFirstNonAngryCat(cats);
         //System.out.println(catStatistics.getCommonWeight(cats, true));
-        System.out.println(catStatistics.groupCatsByFirstLetter(cats));
+        //System.out.println(catStatistics.groupCatsByFirstLetter(cats));
+        catStatistics.streamApiTest(cats);
 
 
         System.out.println();

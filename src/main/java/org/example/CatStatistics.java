@@ -14,8 +14,21 @@ import java.util.*;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
+import java.util.stream.Stream;
 
 public class CatStatistics {
+
+    public void streamApiTest (ArrayList<Cat> cats){
+
+        //Фильтрует злых котов:
+        //cats.stream().filter(cat -> cat.isAngry() == true).forEach(cat -> System.out.println(cat.getName()));
+
+        //cats.stream().forEachOrdered(cat -> System.out.println(cat.getName()));
+        //Arrays.stream(cats.toArray()).forEach(cat -> System.out.println(cat));
+        //Stream.of(cats.toArray()).forEach(cat -> System.out.println(cat));
+        //cats.forEach(System.out::println);
+
+    }
 
 
     public void catsToString(ArrayList<Cat> cats) {
